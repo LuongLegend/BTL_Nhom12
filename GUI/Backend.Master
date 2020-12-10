@@ -4,16 +4,64 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <link href="CSS/masterPageCSS/dropdown.css" type="text/css" rel="stylesheet" />
+    <link href="CSS/masterPageCSS/layout.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Bán hàng online</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
+    
     </asp:ContentPlaceHolder>
+   
 </head>
-<body>
+<body class="app">
     <form id="form1" runat="server">
-        <div>
+    
+        <header>
+            <div class="dropdown" style="float:right;">
+				<button class="dropbtn"><asp:Label ID="lablAdminName" runat="server" Text="Admin Name" ></asp:Label></button>
+				<div class="dropdown-content">
+				  <a href="MyAccount.aspx" >	<img src="Image/Icon/userIcon.png" height="20" width="20" alt=""/>Account</a>
+                  <asp:Button ID="btnLogout" runat="server" Text="Logout" CssClass="aaa" OnClick="btnLogout_Click"/> 
+                       
+               
+				</div>
+                </header>  
+         <div class="sidenav">
+      <a href="Dashboard.aspx">Dashboard</a>
+      <button class="dropdown-btn" >Account management 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="Account.aspx">List Account</a>
+        <a href="InsertAccount.aspx">Insert Account</a>
+      </div>
+      <a href="Products.aspx">Product management</a>
+      <a href="Bonus.aspx">Bonus management</a>
+      <a href="News.aspx">News management</a>
+      <a href="Bill.aspx">Bill management</a>
+      <a href="Contact.aspx">Contact user</a>
+   </div>
+        <div class="main">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-        </div>
-    </form>
+        </div>  
+   </form>
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function (e) {
+                e.preventDefault();
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+          } else {
+          dropdownContent.style.display = "block";
+          }
+          });
+        }
+    </script>
 </body>
 </html>

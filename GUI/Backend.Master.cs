@@ -11,7 +11,17 @@ namespace GUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (HttpContext.Current.Session["fullname"] != null)
+            {
+                lablAdminName.Text = HttpContext.Current.Session["fullname"].ToString();
+            }
+        }
 
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session["fullname"] = null;
+            Session["role"] = null;
+            Response.Redirect("/Login.aspx");
         }
     }
 }
