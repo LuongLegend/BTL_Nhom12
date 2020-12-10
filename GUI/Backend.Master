@@ -7,11 +7,16 @@
     <link href="CSS/masterPageCSS/dropdown.css" type="text/css" rel="stylesheet" />
     <link href="CSS/masterPageCSS/layout.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Bán hàng online</title>
+
+    <title>Trang quản lý nhóm 12</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     
     </asp:ContentPlaceHolder>
-   
+    <script type="text/javascript" language="javascript">
+        function helloWorld() {
+            alert("welcome to codepedia.info");
+        }
+    </script>
 </head>
 <body class="app">
     <form id="form1" runat="server">
@@ -22,24 +27,23 @@
 				<div class="dropdown-content">
 				  <a href="MyAccount.aspx" >	<img src="Image/Icon/userIcon.png" height="20" width="20" alt=""/>Account</a>
                   <asp:Button ID="btnLogout" runat="server" Text="Logout" CssClass="aaa" OnClick="btnLogout_Click"/> 
-                       
-               
 				</div>
-                </header>  
+            </div>
+         </header>  
          <div class="sidenav">
       <a href="Dashboard.aspx">Dashboard</a>
-      <button class="dropdown-btn" >Account management 
+      <button class="dropdown-btn" id="acc">Account management 
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-container">
         <a href="Account.aspx">List Account</a>
         <a href="InsertAccount.aspx">Insert Account</a>
       </div>
-      <a href="Products.aspx">Product management</a>
-      <a href="Bonus.aspx">Bonus management</a>
-      <a href="News.aspx">News management</a>
-      <a href="Bill.aspx">Bill management</a>
-      <a href="Contact.aspx">Contact user</a>
+      <a href="Products.aspx" id="pro">Product management</a>
+      <a href="Bonus.aspx" id="bon">Bonus management</a>
+      <a href="News.aspx" id="news">News management</a>
+      <a href="Bill.aspx" id="bill">Bill management</a>
+      <a href="Contact.aspx" id="cont">Contact user</a>
    </div>
         <div class="main">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
