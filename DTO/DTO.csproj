@@ -44,6 +44,7 @@
     <Compile Include="Bonus.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Admin.cs" />
+    <Compile Include="Contact.cs" />
     <Compile Include="Products.cs" />
     <Compile Include="Product_Bonus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
