@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    class BUS_Contact
+    public class BUS_Contact
     {
         DAL_layer da = new DAL_layer();
 
