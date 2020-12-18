@@ -12,11 +12,6 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     
     </asp:ContentPlaceHolder>
-    <script type="text/javascript" language="javascript">
-        function helloWorld() {
-            alert("welcome to codepedia.info");
-        }
-    </script>
 </head>
 <body class="app">
     <form id="form1" runat="server">

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CKEditor 5 demo</title>
+</head>
+<body>
+    <div class="editor"></div>
+    <script src="ck5.js"></script>
+    <script>
+		ClassicEditor
+			.create(document.querySelector('.editor'), {
+				cloudServices: {
+					tokenUrl: 'https://77093.cke-cs.com/token/dev/33ce323f9c2c7d3db21f73f00481e0e76dd57b91479d332a08711b93b5bd',
+					uploadUrl: 'https://77093.cke-cs.com/easyimage/upload/'
+				},
+				toolbar: {
+					items: [
+						'heading',
+						'htmlEmbed',
+						'CKFinder',
+						'|',
+						'bold',
+						'underline',
+						'italic',
+						'link',
+						'fontColor',
+						'fontSize',
+						'fontFamily',
+						'fontBackgroundColor',
+						'highlight',
+						'bulletedList',
+						'numberedList',
+						'|',
+						'indent',
+						'outdent',
+						'|',
+						'alignment',
+						'imageUpload',
+						'blockQuote',
+						'insertTable',
+						'mediaEmbed',
+						'undo',
+						'redo'
+					]
+				},
+				language: 'en',
+				image: {
+					toolbar: [
+						'imageTextAlternative',
+						'imageStyle:full',
+						'imageStyle:side'
+					]
+				},
+				table: {
+					contentToolbar: [
+						'tableColumn',
+						'tableRow',
+						'mergeTableCells',
+						'tableCellProperties'
+					]
+				},
+				licenseKey: '',
+
+			})
+			.then(editor => {
+				window.editor = editor;
+			})
+			.catch(error => {
+				console.error(error);
+			});
+    </script>
+</body>
+</html>
