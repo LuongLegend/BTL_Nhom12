@@ -71,6 +71,7 @@
     <Content Include="AddNews.aspx" />
     <Content Include="Bill.aspx" />
     <Content Include="Bonus.aspx" />
+    <Content Include="CK5editor\ck5.js" />
     <Content Include="Contact.aspx" />
     <Content Include="CSS\login.css" />
     <Content Include="CSS\masterPageCSS\dropdown.css" />
@@ -211,6 +212,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Backend.Master" />
+    <Content Include="CK5editor\demoCK5editor" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
