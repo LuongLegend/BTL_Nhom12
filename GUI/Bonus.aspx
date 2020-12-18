@@ -20,7 +20,7 @@
                 <asp:BoundField DataField="price" HeaderText="Price" >
                 <ItemStyle HorizontalAlign="Center" />
                 </asp:BoundField>
-                <asp:CommandField HeaderText="Edit" ShowEditButton="True" >
+                <asp:CommandField HeaderText="Edit" ShowEditButton="True">
                 <ItemStyle HorizontalAlign="Center" />
                 </asp:CommandField>
                 <asp:CommandField HeaderText="Delete" ShowDeleteButton="True" >

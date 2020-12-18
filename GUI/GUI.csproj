@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account.aspx" />
+    <Content Include="AddNews.aspx" />
     <Content Include="Bill.aspx" />
     <Content Include="Bonus.aspx" />
     <Content Include="Contact.aspx" />
@@ -118,6 +119,13 @@
     </Compile>
     <Compile Include="Account.aspx.designer.cs">
       <DependentUpon>Account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddNews.aspx.cs">
+      <DependentUpon>AddNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddNews.aspx.designer.cs">
+      <DependentUpon>AddNews.aspx</DependentUpon>
     </Compile>
     <Compile Include="Backend.Master.cs">
       <DependentUpon>Backend.Master</DependentUpon>
