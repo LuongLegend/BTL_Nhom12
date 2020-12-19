@@ -71,6 +71,7 @@
     <Content Include="AddNews.aspx" />
     <Content Include="Bill.aspx" />
     <Content Include="Bonus.aspx" />
+    <Content Include="ChangePassword.aspx" />
     <Content Include="CK5editor\ck5.js" />
     <Content Include="Contact.aspx" />
     <Content Include="CSS\login.css" />
@@ -148,6 +149,13 @@
     </Compile>
     <Compile Include="Bonus.aspx.designer.cs">
       <DependentUpon>Bonus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>

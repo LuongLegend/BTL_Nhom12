@@ -27,6 +27,7 @@ namespace GUI
                 {
                     Session["fullname"] = login.getFullName(ad.Admin_name_, ad.Password_);
                     Session["role"] = login.getRole(ad.Admin_name_, ad.Password_);
+                    Session["id"] = login.getID(ad.Admin_name_, ad.Password_);
                     Response.Redirect("/Home.aspx");
                 }
                 else
