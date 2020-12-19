@@ -85,6 +85,9 @@
     <Content Include="Image\bonus\mat-na.jpg" />
     <Content Include="Image\Icon\logoutIcon.png" />
     <Content Include="Image\Icon\userIcon.png" />
+    <Content Include="Image\news\news1.jpg" />
+    <Content Include="Image\news\news2.jpg" />
+    <Content Include="Image\news\news3.jpg" />
     <Content Include="Image\product\sp1.jpg" />
     <Content Include="Image\product\sp10.jpg" />
     <Content Include="Image\product\sp11.jpg" />
