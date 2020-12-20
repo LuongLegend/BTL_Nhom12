@@ -33,5 +33,10 @@ namespace BUS
             DataRow dr = getAdminInfor(uname, pass);
             return dr["role"].ToString();
         }
+        public string getID(string uname, string pass)
+        {
+            DataRow dr = getAdminInfor(uname, pass);
+            return dr["admin_id"].ToString();
+        }
     }
 }
