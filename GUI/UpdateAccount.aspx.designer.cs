@@ -11,7 +11,7 @@ namespace GUI
 {
 
 
-    public partial class InsertAccount
+    public partial class UpdateAccount
     {
 
         /// <summary>
@@ -24,15 +24,6 @@ namespace GUI
         protected global::System.Web.UI.WebControls.TextBox txtAdminID;
 
         /// <summary>
-        /// cusCustom control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator cusCustom;
-
-        /// <summary>
         /// txtAdminName control.
         /// </summary>
         /// <remarks>
@@ -40,15 +31,6 @@ namespace GUI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAdminName;
-
-        /// <summary>
-        /// validName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator validName;
 
         /// <summary>
         /// txtFullname control.
@@ -78,15 +60,6 @@ namespace GUI
         protected global::System.Web.UI.WebControls.TextBox txtAddress;
 
         /// <summary>
-        /// txtPass control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPass;
-
-        /// <summary>
         /// txtNote control.
         /// </summary>
         /// <remarks>
@@ -103,6 +76,15 @@ namespace GUI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList roleList;
+
+        /// <summary>
+        /// activeL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList activeL;
 
         /// <summary>
         /// Button1 control.

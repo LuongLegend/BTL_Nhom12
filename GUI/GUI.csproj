@@ -74,9 +74,21 @@
     <Content Include="ChangePassword.aspx" />
     <Content Include="CK5editor\ck5.js" />
     <Content Include="Contact.aspx" />
+    <Content Include="CSS\boostrap\css\bootstrap-grid.css" />
+    <Content Include="CSS\boostrap\css\bootstrap-grid.min.css" />
+    <Content Include="CSS\boostrap\css\bootstrap-reboot.css" />
+    <Content Include="CSS\boostrap\css\bootstrap-reboot.min.css" />
+    <Content Include="CSS\boostrap\css\bootstrap.css" />
+    <Content Include="CSS\boostrap\css\bootstrap.min.css" />
+    <Content Include="CSS\boostrap\js\bootstrap.bundle.js" />
+    <Content Include="CSS\boostrap\js\bootstrap.bundle.min.js" />
+    <Content Include="CSS\boostrap\js\bootstrap.js" />
+    <Content Include="CSS\boostrap\js\bootstrap.min.js" />
     <Content Include="CSS\login.css" />
+    <Content Include="CSS\LuongLegend.css" />
     <Content Include="CSS\masterPageCSS\dropdown.css" />
     <Content Include="CSS\masterPageCSS\layout.css" />
+    <Content Include="CSS\table.css" />
     <Content Include="Dashboard.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
@@ -115,6 +127,8 @@
     <Content Include="MyAccount.aspx" />
     <Content Include="News.aspx" />
     <Content Include="Products.aspx" />
+    <Content Include="ResetPassword.aspx" />
+    <Content Include="UpdateAccount.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -220,10 +234,34 @@
       <DependentUpon>Products.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAccount.aspx.cs">
+      <DependentUpon>UpdateAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateAccount.aspx.designer.cs">
+      <DependentUpon>UpdateAccount.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Backend.Master" />
     <Content Include="CK5editor\demoCK5editor" />
+    <Content Include="CSS\boostrap\css\bootstrap-grid.css.map" />
+    <Content Include="CSS\boostrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="CSS\boostrap\css\bootstrap-reboot.css.map" />
+    <Content Include="CSS\boostrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="CSS\boostrap\css\bootstrap.css.map" />
+    <Content Include="CSS\boostrap\css\bootstrap.min.css.map" />
+    <Content Include="CSS\boostrap\js\bootstrap.bundle.js.map" />
+    <Content Include="CSS\boostrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="CSS\boostrap\js\bootstrap.js.map" />
+    <Content Include="CSS\boostrap\js\bootstrap.min.js.map" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

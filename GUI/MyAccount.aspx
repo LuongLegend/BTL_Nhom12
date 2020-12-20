@@ -2,7 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <asp:FormView ID="FormView1" runat="server" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" Caption="Account" CellPadding="2" ForeColor="Black" align="center"  DataKeyNames="admin_ID" DataSourceID="SqlDataSource1">
+        <h1 align="center">Account</h1><br />
+        <asp:FormView ID="FormView1" runat="server" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" align="center"  DataKeyNames="admin_ID" DataSourceID="SqlDataSource1">
             <EditItemTemplate>
                 admin_ID:
                 <asp:Label ID="admin_IDLabel1" runat="server" Text='<%# Eval("admin_ID") %>' />
