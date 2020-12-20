@@ -26,27 +26,26 @@ namespace GUI
         protected void btnChangePassword_Click(object sender, EventArgs e)
         {
             ad.Admin_ID_ = HttpContext.Current.Session["id"].ToString();
-            ad.Password_ = txtPass.Text;
-            if (!acc.checkPassword(ad.Admin_ID_, ad.Password_))
+            ad.Password_ = txtNewPass.Text;
+            if (!acc.checkPassword(ad.Admin_ID_, txtPass.Text))
             {
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "fallpass", "alert('Mật khẩu không đúng!')", true);
                 clearText();
-            }else 
+            }
+            else
             if (txtNewPass.Text != txtConfPass.Text)
             {
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Mật khẩu không khớp!')", true);
                 clearText();
-            }else
-            if (txtNewPass.Text.Length<6 || txtConfPass.Text.Length <6)
-            {
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "falllength", "alert('Mật khẩu ít nhất 6 ký tự!')", true);
-                clearText();
             }
             else
+                if (IsPostBack)
             {
+
                 acc.changePassword(ad.Admin_ID_, ad.Password_);
+
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "success", "alert('Thay đổi mật khẩu thành công!')", true);
-                Response.Redirect("MyAccount.aspx");
+                //Response.Redirect("MyAccount.aspx");
             }
 
         }

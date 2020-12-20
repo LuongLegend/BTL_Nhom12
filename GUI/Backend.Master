@@ -7,7 +7,13 @@
     <link href="CSS/masterPageCSS/dropdown.css" type="text/css" rel="stylesheet" />
     <link href="CSS/masterPageCSS/layout.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="CSS/boostrap/css/bootstrap-grid.css" type="text/css" />
+    <link rel="stylesheet" href="CSS/boostrap/css/bootstrap-grid.min.css" type="text/css" />
+    <link rel="stylesheet" href="CSS/boostrap/css/bootstrap-reboot.css" type="text/css" />
+    <link rel="stylesheet" href="CSS/boostrap/css/bootstrap-reboot.min.css" type="text/css" />
+    <link rel="stylesheet" href="CSS/boostrap/css/bootstrap.css" type="text/css" />
+     <link rel="stylesheet" href="CSS/boostrap/css/bootstrap.min.css" type="text/css" />
+      <link rel="stylesheet" href="CSS/boostrap/css/bootstrap-grid.css" type="text/css" />
     <title>Trang quản lý nhóm 12</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     

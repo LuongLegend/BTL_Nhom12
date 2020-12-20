@@ -31,7 +31,7 @@ namespace BUS
         }
         public void changePassword(string id, string pass)
         {
-            string sql = "update Admin set password='" + pass + "'";
+            string sql = "update Admin set password='" + pass + "' where admin_ID='"+id+"'";
             da.ExcuteNonQuery(sql);
         }
     }

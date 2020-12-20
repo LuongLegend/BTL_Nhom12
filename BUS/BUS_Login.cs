@@ -13,7 +13,7 @@ namespace BUS
         DAL_layer da = new DAL_layer();
         public bool checkLogin(string uname, string pass)
         {
-            string sql = "select * from Admin where admin_name='" + uname + "' and password = '" + pass + "'";
+            string sql = "select * from Admin where admin_name='" + uname + "' and password = '" + pass + "' and active=1";
             return da.check(sql);
         }
         DataRow getAdminInfor(string uname, string pass)
