@@ -90,6 +90,7 @@
     <Content Include="CSS\masterPageCSS\layout.css" />
     <Content Include="CSS\table.css" />
     <Content Include="Dashboard.aspx" />
+    <Content Include="DetailsProducts.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="Image\bonus\mat-na-bun.jpg" />
@@ -187,6 +188,13 @@
     </Compile>
     <Compile Include="Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetailsProducts.aspx.cs">
+      <DependentUpon>DetailsProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailsProducts.aspx.designer.cs">
+      <DependentUpon>DetailsProducts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

@@ -33,7 +33,7 @@ namespace BUS
         }
         public void updateAdmin(string id, string fullname, string phone, string address, string note, string role, int active)
         {
-            string sql = "update Admin set full_name=N'" + fullname + "', phone='" + phone + "', address=N'" + address + "s', note=N'" + note + "', role='" + role + "', active='" + active + "' where admin_ID='"+id+"'";
+            string sql = "update Admin set full_name=N'" + fullname + "', phone='" + phone + "', address=N'" + address + "', note=N'" + note + "', role='" + role + "', active='" + active + "' where admin_ID='"+id+"'";
             da.ExcuteNonQuery(sql);
         }
 

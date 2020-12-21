@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class Products
+    public class DTO_Products
     {
         string product_id_, product_name_, product_brand_, origin_, sumary_, photo_, deatail_;
         bool status_product_;
         int price_, quantity_;
-        public Products()
+        int active_;
+        public DTO_Products()
         {
 
         }
@@ -25,5 +26,6 @@ namespace DTO
         public string Photo_ { get => photo_; set => photo_ = value; }
         public string Deatail_ { get => deatail_; set => deatail_ = value; }
         public bool Status_product_ { get => status_product_; set => status_product_ = value; }
+        public int Active_ { get => active_; set => active_ = value; }
     }
 }
