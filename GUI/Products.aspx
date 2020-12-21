@@ -15,7 +15,7 @@
   <div class="form-group row">
     <label for="inputCata" class="col-sm-2 col-form-label">Catagories: </label>
     <div class="col-sm-10">
-        <asp:CheckBox ID="CheckBox1" runat="server" /> 
+        <asp:CheckBox ID="CheckBox1" runat="server" Checked="true"/> 
         <b>Tất cả</b> hoặc
          <asp:DropDownList ID="listRole" runat="server" TabIndex="7" DataSourceID="SqlDataSource1" DataTextField="category_name" DataValueField="category_ID" >
                 

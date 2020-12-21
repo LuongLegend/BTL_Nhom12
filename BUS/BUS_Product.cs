@@ -17,9 +17,27 @@ namespace BUS
             string sql = "select * from products";
             return da.GetTable(sql);
         }
+        public DataTable getCatProduct(string id)
+        {
+            string sql = "select * from products inner join Product_Category on products.product_ID=Product_Category.product_ID "+
+              "where products.product_ID='"+id+"'";
+            return da.GetTable(sql);
+        }
+        public DataTable getAllCat()
+        {
+            string sql = "select * from Categories";
+            return da.GetTable(sql);
+        }
+
+
+        public DataTable getOneProduct(string id)
+        {
+            string sql = "select * from products where product_id='"+id+"'";
+            return da.GetTable(sql);
+        }
         public DataTable findProduct(string keyword, string cat, string priceMin, string priceMax, string active)
         {
-            string sql = "select distinct * from products left join Product_Category on products.product_ID=Product_Category.product_ID where (product_name like N'%" + keyword+
+            string sql = "select distinct products.product_ID,product_name,product_brand,origin,summary,price,quantity,photo,active from products left join Product_Category on products.product_ID=Product_Category.product_ID where (product_name like N'%" + keyword+
                 "%' or product_brand like N'%"+keyword+"%'"+
                    " or products.product_ID like N'%" + keyword + "%'" +
                    " or origin like N'%" + keyword + "%') ";
