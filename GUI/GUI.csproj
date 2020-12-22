@@ -133,6 +133,7 @@
     <Content Include="Image\product\sp8.jpg" />
     <Content Include="Image\product\sp9.jpg" />
     <Content Include="InsertAccount.aspx" />
+    <Content Include="InsertProduct.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MyAccount.aspx" />
     <Content Include="News.aspx" />
@@ -568,6 +569,13 @@
     </Compile>
     <Compile Include="InsertAccount.aspx.designer.cs">
       <DependentUpon>InsertAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InsertProduct.aspx.cs">
+      <DependentUpon>InsertProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsertProduct.aspx.designer.cs">
+      <DependentUpon>InsertProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

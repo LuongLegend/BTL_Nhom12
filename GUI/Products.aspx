@@ -47,7 +47,7 @@
       <asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" CssClass="btn btn-primary" OnClick="btnSearch_Click"/>
     </div>
   </div>
-    <asp:Button ID="btnThem" runat="server" Text="Thêm sản phẩm" CssClass="btn btn-success" style="margin-top:10px;margin-bottom:10px"/>
+    <asp:Button ID="btnThem" runat="server" Text="Thêm sản phẩm" CssClass="btn btn-success" style="margin-top:10px;margin-bottom:10px" OnClick="btnThem_Click"/>
     <div class="card-body">
         <asp:DataList ID="DataList1" runat="server" CellPadding="4" ForeColor="#333333" RepeatColumns="3">
             <AlternatingItemStyle BackColor="White" />
@@ -74,6 +74,10 @@
                 <p style="font-weight:bold">
                     brand:
                     <asp:Label ID="Label6" runat="server" Text='<%# Eval("product_brand") %>'></asp:Label>
+                </p>
+                    <p style="font-weight:bold">
+                     quantity:
+                    <asp:Label ID="Label7" runat="server" Text='<%# Eval("quantity") %>'></asp:Label>
                 </p>
                 <p>
                     <asp:Label ID="Label3" runat="server" Text='<%# Eval("summary") %>'></asp:Label>

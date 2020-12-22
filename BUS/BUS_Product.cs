@@ -23,6 +23,13 @@ namespace BUS
               "where products.product_ID='"+id+"'";
             return da.GetTable(sql);
         }
+
+        public bool checkProductID(string id)
+        {
+            string sql = "select * from products " +
+             "where products.product_ID='" + id + "'";
+            return da.check(sql);
+        }
         public DataTable getAllCat()
         {
             string sql = "select * from Categories";
@@ -50,7 +57,7 @@ namespace BUS
 
         public void insertProduct(string id, string name, string brand, string origin, string sumary, int price, int quantity, string photo, string detail)
         {
-            string sql = "insert into products values(N'"+id+"',N'"+name+ "',N'"+brand+ "',N'"+origin+ "',N'"+sumary+ "',"+1+ "',"+price+ ","+quantity+ ",N'"+photo+ "',N'"+detail+"',1)";
+            string sql = "insert into products values(N'"+id+"',N'"+name+ "',N'"+brand+ "',N'"+origin+ "',N'"+sumary+ "',1,"+price+ ","+quantity+ ",N'"+photo+ "',N'"+detail+"',1)";
             da.ExcuteNonQuery(sql);
         }
 

@@ -22,7 +22,12 @@ namespace GUI
         protected void Page_Load(object sender, EventArgs e)
         { 
             if (Session["fullname"] == null) Response.Redirect("/Login.aspx");
-            if (HttpContext.Current.Session["role"].ToString() != "admin" && HttpContext.Current.Session["role"].ToString() != "purchaser")
+            if (HttpContext.Current.Session["role"].ToString() != "admin" 
+                && HttpContext.Current.Session["role"].ToString() != "purchaser" 
+                && HttpContext.Current.Session["role"].ToString() != "writter" 
+                && HttpContext.Current.Session["role"].ToString() != "marketer"
+  
+                )
             {
                 Response.Redirect("/Home.aspx");
             }
@@ -48,6 +53,11 @@ namespace GUI
 
             }
 
+        }
+
+        protected void btnThem_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("InsertProduct.aspx");
         }
     }
 }

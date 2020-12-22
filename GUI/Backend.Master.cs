@@ -40,14 +40,14 @@ namespace GUI
                         cs.RegisterStartupScript(cstype, "6", hideAcc);
                         cs.RegisterStartupScript(cstype, "7", hideCont);
                         cs.RegisterStartupScript(cstype, "8", hideBon);
-                        cs.RegisterStartupScript(cstype, "9", hidePro);
+                       // cs.RegisterStartupScript(cstype, "9", hidePro);
                         break;
                     case "marketer":
                         cs.RegisterStartupScript(cstype, "10", hideBill);
                         cs.RegisterStartupScript(cstype, "11", hideAcc);
                         cs.RegisterStartupScript(cstype, "12", hideNews);
                         cs.RegisterStartupScript(cstype, "8", hideBon);
-                        cs.RegisterStartupScript(cstype, "9", hidePro);
+                       // cs.RegisterStartupScript(cstype, "9", hidePro);
                     break;
                     case "approver":
                         cs.RegisterStartupScript(cstype, "13", hideBill);
