@@ -33,6 +33,13 @@
             <asp:BoundField DataField="status_Contact" HeaderText="Trang Thai" SortExpression="status_Contact">
             <ItemStyle HorizontalAlign="Center" Width="200px" />
             </asp:BoundField>
+
+
+
+            <asp:CommandField HeaderText="Cap Nhat" SelectText="Cap Nhat" ShowSelectButton="True" />
+
+
+
         </Columns>
         <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
         <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
