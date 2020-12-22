@@ -46,6 +46,7 @@
     <Compile Include="BUS_Login.cs" />
     <Compile Include="BUS_MyAccount.cs" />
     <Compile Include="BUS_News.cs" />
+    <Compile Include="BUS_Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
