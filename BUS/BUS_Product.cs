@@ -50,13 +50,13 @@ namespace BUS
 
         public void insertProduct(string id, string name, string brand, string origin, string sumary, int price, int quantity, string photo, string detail)
         {
-            string sql = "insert into products values(N'"+id+"',N'"+name+ "',N'"+brand+ "',N'"+origin+ "',N'"+sumary+ "',"+1+ "',"+price+ ","+quantity+ ",N'"+photo+ "',N'"+detail+"',"+1+")";
+            string sql = "insert into products values(N'"+id+"',N'"+name+ "',N'"+brand+ "',N'"+origin+ "',N'"+sumary+ "',"+1+ "',"+price+ ","+quantity+ ",N'"+photo+ "',N'"+detail+"',1)";
             da.ExcuteNonQuery(sql);
         }
 
         public void updateProduct(string id, string name, string brand, string origin, string sumary, int price, int quantity, string photo, string detail, string active)
         {
-            string sql = "update Products set product_name=N'" + name + "', product_brand='" + brand + "', origin=N'" + origin + "', summary=N'" + sumary + "', price=" + price + ", quantity=" + quantity + ",photo=N'"+photo+"',active="+active+"  where product_ID='" + id + "'";
+            string sql = "update Products set product_name=N'" + name + "', product_brand='" + brand + "', origin=N'" + origin + "', summary=N'" + sumary + "', price=" + price + ", detail=N'" + detail + "', quantity=" + quantity + ",photo=N'"+photo+"',active="+active+"  where product_ID='" + id + "'";
             da.ExcuteNonQuery(sql);
         }
         public void insertProductCatagory(string product_id, string cat_id)
