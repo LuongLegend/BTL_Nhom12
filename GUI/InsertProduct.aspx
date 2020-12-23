@@ -7,7 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form >
         <div class="form-row" style="margin-top:30px">
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6" style="left: 0px; top: 0px">
               <label for="txt_ProductID" style="font-weight:bold">ProductID</label>
                  <asp:TextBox ID="txt_ProductID" runat="server" TabIndex="-1" required="required" placeholder="product ID" CssClass="form-control" pattern="[A-Za-z0-9]+" ></asp:TextBox>
                  <asp:CustomValidator runat="server" id="cusCustom" controltovalidate="txt_ProductID" onservervalidate="validateProductID" errormessage="product ID đã tồn tại" class="fa fa-warning" style="color:red"/>
@@ -54,7 +54,7 @@
                   <label for="CheckBoxList2" style="font-weight:bold">Catagories</label>
                 <asp:CheckBoxList ID="CheckBoxList2" runat="server"></asp:CheckBoxList>
                 </div>
-        <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary"  style="position:fixed;right:30%;bottom:30%;padding:20px" Text="Thêm" OnClick="Button1_Click"  />
+        <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary"  style="position:fixed;right:30%;bottom:-2147483648%; padding:20px" Text="Thêm" OnClick="Button1_Click"  />
     </form>
    
 </asp:Content>

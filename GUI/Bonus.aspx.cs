@@ -36,10 +36,24 @@ namespace GUI
             //hienthi();
         }
 
-        protected void grbonus_RowEditing(object sender, GridViewEditEventArgs e)
+        protected void grbonus_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-            grbonus.EditIndex = e.NewEditIndex;
-            Response.Redirect("/Bonus.aspx");
+            grbonus.PageIndex = e.NewPageIndex;
+            hienthi();
+        }
+
+        protected void grbonus_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if(e.CommandName == "editBonus")
+            {
+                string id = grbonus.Rows[int.Parse(e.CommandArgument.ToString())].Cells[0].Text;
+                Response.Redirect("UpdateBonus.aspx?id=" + id);
+            }
+        }
+
+        protected void btnadd_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("InsertBonus.aspx");
         }
     }
 }

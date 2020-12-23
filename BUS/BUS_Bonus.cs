@@ -15,15 +15,25 @@ namespace BUS
             string sql = "SELECT * FROM BONUS";
             return da.GetTable(sql);
         }
-
+        public DataTable getBonusID(string bonusid)
+        {
+            string sql = "select * from bonus where bonus_ID='" + bonusid + "'";
+            return da.GetTable(sql);
+        }
         public void delBonus(string bonusid)
         {
             string sql = "DELETE FROM BONUS WHERE bonus_id = '"+bonusid+"'";
             da.ExcuteNonQuery(sql);
         }
-        public void editBonus(string bonusid)
+        public void updateBonus(string bonusid, string bonusname, string photo, int price)
         {
-            string sql = "UPDATE BONUS SET ";
+            string sql = "update BONUS set name_bonus=N'" + bonusname + "', photo='" + photo + "', price=" + price + " where bonus_ID='" + bonusid + "'";
+            da.ExcuteNonQuery(sql);
+        }
+        public void insertBonus(string bonusid, string bonusname, string photo, int price)
+        {
+            string sql = "insert into Bonus values('" + bonusid + "',N'" + bonusname + "','" + photo + "'," + price +")";
+            da.ExcuteNonQuery(sql);
         }
     }
 }
