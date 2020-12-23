@@ -1,12 +1,25 @@
 ﻿<%@ Page Title="Account management" Language="C#" MasterPageFile="~/Backend.Master" AutoEventWireup="true" CodeBehind="Account.aspx.cs" Inherits="GUI.Account" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style1 {
+            position: relative;
+            width: 100%;
+            -ms-flex: 0 0 83.333333%;
+            flex: 0 0 83.333333%;
+            max-width: 83.333333%;
+            left: 1px;
+            top: 0px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     Quản lý tài khoản<br />
   <div class="card">
   <div class="form-group row" >
     <label for="inputEmail3" class="col-sm-2 col-form-label">Keyword: </label>
-    <div class="col-sm-10">
+    <div class="auto-style1">
         <asp:TextBox ID="txtKeyword" runat="server" CssClass="form-control" placeholder="admin_ID | admin_name | fullname | address | phone number"></asp:TextBox>
     </div>
   </div>
@@ -29,7 +42,7 @@
   </div>
 
    
-<asp:LinkButton ID="lbThem" runat="server" PostBackUrl="~/InsertAccount.aspx" CssClass="btn btn-success">Thêm</asp:LinkButton>
+<asp:LinkButton ID="lbThem" runat="server" PostBackUrl="~/InsertAccount.aspx" CssClass="btn btn-success" OnClick="lbThem_Click">Thêm</asp:LinkButton>
 <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" PageSize="5" OnPageIndexChanging="GridView1_PageIndexChanging" Width="100%" OnRowCommand="GridView1_RowCommand">
     <AlternatingRowStyle BackColor="White" />
     <Columns>
