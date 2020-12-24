@@ -23,7 +23,7 @@
                 <asp:CommandField HeaderText="Edit" ShowEditButton="True">
                 <ItemStyle HorizontalAlign="Center" />
                 </asp:CommandField>
-                <asp:CommandField HeaderText="Delete" ShowDeleteButton="True" >
+                <asp:CommandField HeaderText="Delete" ShowDeleteButton="True">
                 <ItemStyle HorizontalAlign="Center" />
                 </asp:CommandField>
             </Columns>
