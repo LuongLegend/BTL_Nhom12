@@ -41,6 +41,7 @@
         <a href="InsertAccount.aspx">Insert Account</a>
       </div>
       <a href="Products.aspx" id="pro">Product management</a>
+      <a href="Catagory.aspx" id="cat">Catagory Product management</a>
       <a href="Bonus.aspx" id="bon">Bonus management</a>
       <a href="News.aspx" id="news">News management</a>
       <a href="Bill.aspx" id="bill">Bill management</a>

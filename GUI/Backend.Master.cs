@@ -24,6 +24,7 @@ namespace GUI
                string hideBill = "<script> document.getElementById(\"bill\").style.display = \"none\" </script>";
                string hideAcc = "<script> document.getElementById(\"acc\").style.display = \"none\" </script>";
                string hidePro = "<script> document.getElementById(\"pro\").style.display = \"none\" </script>";
+               string hideCat = "<script> document.getElementById(\"cat\").style.display = \"none\" </script>";
                string hideBon = "<script> document.getElementById(\"bon\").style.display = \"none\" </script>";
                string hideNews= "<script> document.getElementById(\"news\").style.display = \"none\" </script>";
                string hideCont = "<script> document.getElementById(\"cont\").style.display = \"none\" </script>";
@@ -47,12 +48,14 @@ namespace GUI
                         cs.RegisterStartupScript(cstype, "11", hideAcc);
                         cs.RegisterStartupScript(cstype, "12", hideNews);
                         cs.RegisterStartupScript(cstype, "8", hideBon);
-                       // cs.RegisterStartupScript(cstype, "9", hidePro);
+                        cs.RegisterStartupScript(cstype, "17", hideCat);
+                    // cs.RegisterStartupScript(cstype, "9", hidePro);
                     break;
                     case "approver":
                         cs.RegisterStartupScript(cstype, "13", hideBill);
                         cs.RegisterStartupScript(cstype, "14", hideBon);
                         cs.RegisterStartupScript(cstype, "15", hidePro);
+                        cs.RegisterStartupScript(cstype, "16", hideCat);
                         break;
 
                 }
