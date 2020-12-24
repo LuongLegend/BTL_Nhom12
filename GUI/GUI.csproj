@@ -77,7 +77,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account.aspx" />
-    <Content Include="AddNews.aspx" />
     <Content Include="Bill.aspx" />
     <Content Include="Bonus.aspx" />
     <Content Include="ChangePassword.aspx" />
@@ -133,6 +132,7 @@
     <Content Include="Image\product\sp8.jpg" />
     <Content Include="Image\product\sp9.jpg" />
     <Content Include="InsertAccount.aspx" />
+    <Content Include="InsertNew.aspx" />
     <Content Include="InsertBonus.aspx" />
     <Content Include="InsertProduct.aspx" />
     <Content Include="Login.aspx" />
@@ -488,6 +488,7 @@
     <Content Include="Scripts\ckeditor\skins\v2\templates.css" />
     <Content Include="Scripts\ckeditor\themes\default\theme.js" />
     <Content Include="UpdateAccount.aspx" />
+    <Content Include="UpdateNew.aspx" />
     <Content Include="UpdateBonus.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -498,13 +499,6 @@
     </Compile>
     <Compile Include="Account.aspx.designer.cs">
       <DependentUpon>Account.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AddNews.aspx.cs">
-      <DependentUpon>AddNews.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AddNews.aspx.designer.cs">
-      <DependentUpon>AddNews.aspx</DependentUpon>
     </Compile>
     <Compile Include="Backend.Master.cs">
       <DependentUpon>Backend.Master</DependentUpon>
@@ -572,6 +566,12 @@
     <Compile Include="InsertAccount.aspx.designer.cs">
       <DependentUpon>InsertAccount.aspx</DependentUpon>
     </Compile>
+    <Compile Include="InsertNew.aspx.cs">
+      <DependentUpon>InsertNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsertNew.aspx.designer.cs">
+      <DependentUpon>InsertNew.aspx</DependentUpon>
     <Compile Include="InsertBonus.aspx.cs">
       <DependentUpon>InsertBonus.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -629,6 +629,12 @@
     <Compile Include="UpdateAccount.aspx.designer.cs">
       <DependentUpon>UpdateAccount.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UpdateNew.aspx.cs">
+      <DependentUpon>UpdateNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateNew.aspx.designer.cs">
+      <DependentUpon>UpdateNew.aspx</DependentUpon>
     <Compile Include="UpdateBonus.aspx.cs">
       <DependentUpon>UpdateBonus.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

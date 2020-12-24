@@ -29,7 +29,27 @@ namespace GUI
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AddNews.aspx");
+            Response.Redirect("InsertNew.aspx");
+        }
+
+        protected void grdNews_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "editNew")
+            {
+                string id = grdNews.Rows[int.Parse(e.CommandArgument.ToString())].Cells[0].Text;
+                Response.Redirect("UpdateNew.aspx?id=" + id);
+            }
+        }
+
+        protected void grdNews_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grdNews.PageIndex = e.NewPageIndex;
+        }
+
+        protected void grdNews_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            bn.deleteNew(grdNews.DataKeys[e.RowIndex].Value.ToString());
+            Response.Redirect("/News.aspx");
         }
     }
 }

@@ -63,9 +63,7 @@
                 </asp:DropDownList>
             </ItemTemplate>
         </asp:TemplateField>
-      
         <asp:BoundField DataField="active" HeaderText="Active" />
- 
         <asp:ButtonField CommandName="editAcc" HeaderText="Edit" Text="Edit" ControlStyle-ForeColor="Blue">
 <ControlStyle ForeColor="Blue"></ControlStyle>
         </asp:ButtonField>
