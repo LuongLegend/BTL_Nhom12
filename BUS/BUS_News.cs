@@ -25,9 +25,14 @@ namespace BUS
             string sql = "select * from News where new_ID='" + id + "'";
             return da.GetTable(sql);
         }
-        public void insertNew(string id, string title, string photo, string statusNew, string summary, string detail)
+        public bool checkNews(string id)
         {
-            string sql = "insert into News values(N'" + id + "',N'" + title + "',N'" + photo + "',N'" + statusNew + "',N'" + summary + "',N'" + detail + "')";
+            string sql = "select * from News where new_ID='" + id + "'";
+            return da.check(sql);
+        }
+        public void insertNew(string id, string title, string photo, string detail, int statusNew, string summary)
+        {
+            string sql = "insert into News values(N'" + id + "',N'" + title + "',N'" + photo + "',N'" + detail + "'," + statusNew + ",N'" + summary + "')";
             da.ExcuteNonQuery(sql);
         }
         public void updateNew(string id, string title, string photo, string detail, string status_News, string sumary)
