@@ -52,5 +52,10 @@ namespace GUI
             GridView1.DataSource = acc.findAccount(txtKeyword.Text, listRole.SelectedValue);
             GridView1.DataBind();
         }
+
+        protected void lbThem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

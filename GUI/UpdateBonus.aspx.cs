@@ -50,7 +50,7 @@ namespace GUI
             bn.Name_bonus_ = txtbonusname.Text;
             bn.Photo_ = pt;
             bn.Price_ = Convert.ToInt32(txtbonusprice.Text);
-            bb.updateBonus(bn.Bonus_id_, bn.Name_bonus_, bn.Photo_, bn.Price_);
+            bb.updateBonus(bn);
             saveUpLoadFile();
             Response.Redirect("Bonus.aspx");
         }

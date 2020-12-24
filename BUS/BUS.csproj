@@ -43,10 +43,12 @@
   <ItemGroup>
     <Compile Include="BUS_AccountManagement.cs" />
     <Compile Include="BUS_Bonus.cs" />
+    <Compile Include="BUS_Categories.cs" />
     <Compile Include="BUS_Login.cs" />
     <Compile Include="BUS_MyAccount.cs" />
     <Compile Include="BUS_News.cs" />
     <Compile Include="BUS_Product.cs" />
+    <Compile Include="BUS_Sale.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
