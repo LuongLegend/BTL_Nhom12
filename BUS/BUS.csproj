@@ -41,15 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS_AccountManagement.cs" />
     <Compile Include="BUS_Bonus.cs" />
     <Compile Include="BUS_Contact.cs" />
     <Compile Include="BUS_Login.cs" />
+    <Compile Include="BUS_MyAccount.cs" />
+    <Compile Include="BUS_News.cs" />
+    <Compile Include="BUS_Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{a2cf1946-77d8-40ca-9bd9-c18f7ef19fc0}</Project>
       <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{cf426975-61a4-48e3-97cf-0918ac1fa6a2}</Project>
+      <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

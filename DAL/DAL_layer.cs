@@ -11,12 +11,11 @@ namespace DAL
     {
         public SqlConnection getConnect()
         {
-            return new SqlConnection(@"Data Source=VANHUNGACA2\SQLEXPRESS;Initial Catalog=DoNgoaiChinhHang;Integrated Security=True");
+            return new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DoNgoaiChinhHang;Integrated Security=True");
         }
 
         public DataTable GetTable(string sql)
         {
-
             SqlConnection con = getConnect();
             con.Open();
             SqlDataAdapter ad = new SqlDataAdapter(sql, con);
