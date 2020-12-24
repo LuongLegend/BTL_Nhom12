@@ -53,6 +53,7 @@
       <HintPath>..\packages\EO.WebBrowser.20.3.63\lib\EO.WebEngine.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -132,6 +133,7 @@
     <Content Include="Image\product\sp8.jpg" />
     <Content Include="Image\product\sp9.jpg" />
     <Content Include="InsertAccount.aspx" />
+    <Content Include="InsertBill.aspx" />
     <Content Include="InsertNew.aspx" />
     <Content Include="InsertBonus.aspx" />
     <Content Include="InsertProduct.aspx" />
@@ -565,6 +567,13 @@
     </Compile>
     <Compile Include="InsertAccount.aspx.designer.cs">
       <DependentUpon>InsertAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InsertBill.aspx.cs">
+      <DependentUpon>InsertBill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsertBill.aspx.designer.cs">
+      <DependentUpon>InsertBill.aspx</DependentUpon>
     </Compile>
     <Compile Include="InsertNew.aspx.cs">
       <DependentUpon>InsertNew.aspx</DependentUpon>
