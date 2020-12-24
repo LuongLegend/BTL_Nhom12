@@ -19,6 +19,7 @@
                 </td>
                 <td class="auto-style7">
                     <asp:TextBox ID="txtbonusid" runat="server" Width="304px" required ="required"></asp:TextBox>
+                    <asp:CustomValidator runat="server" id="cusCustom" controltovalidate="txtbonusid" onservervalidate="validateBonusID" errormessage="Bonus ID đã tồn tại" class="fa fa-warning" style="color:red"/>
                 </td>
             </tr>
             <tr>

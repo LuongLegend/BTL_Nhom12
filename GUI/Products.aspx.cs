@@ -26,7 +26,6 @@ namespace GUI
                 && HttpContext.Current.Session["role"].ToString() != "purchaser" 
                 && HttpContext.Current.Session["role"].ToString() != "writter" 
                 && HttpContext.Current.Session["role"].ToString() != "marketer"
-  
                 )
             {
                 Response.Redirect("/Home.aspx");

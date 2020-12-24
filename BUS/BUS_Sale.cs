@@ -22,6 +22,12 @@ namespace BUS
             string sql = "select * from sale where sale_id='" + sale_id + "'";
             return da.GetTable(sql);
         }
+
+        public bool checkSaleID(string id)
+        {
+            string sql = "select * from sale where sale_id='" + id + "'";
+            return da.check(sql);
+        }
         public void delSale(string sale_id)
         {
             string sql = "DELETE FROM PRODUCT_Sale WHERE sale_id = '" + sale_id + "'";

@@ -16,7 +16,10 @@ namespace GUI
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["fullname"] == null) Response.Redirect("/Login.aspx");
-            if (!HttpContext.Current.Session["role"].ToString().Equals("admin") && !HttpContext.Current.Session["role"].ToString().Equals("purchaser"))
+            if (HttpContext.Current.Session["role"].ToString() != "admin"
+               && HttpContext.Current.Session["role"].ToString() != "purchaser"
+               && HttpContext.Current.Session["role"].ToString() != "marketer"
+               )
             {
                 Response.Redirect("/Home.aspx");
             }
@@ -32,7 +35,7 @@ namespace GUI
         protected void grcate_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             bc.delCategories(grcate.DataKeys[e.RowIndex].Value.ToString());
-            Response.Redirect("/Category.aspx");
+            Response.Redirect("/Categories.aspx");
         }
         protected void grcate_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {

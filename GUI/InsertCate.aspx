@@ -16,9 +16,11 @@
             <tr>
                 <td class="auto-style6">
                     <asp:Label ID="Label1" runat="server" Text="Category ID"></asp:Label>
+                   
                 </td>
                 <td class="auto-style7">
                     <asp:TextBox ID="txtcateid" runat="server" Width="304px" required ="required"></asp:TextBox>
+                     <asp:CustomValidator runat="server" id="cusCustom" controltovalidate="txtcateid" onservervalidate="validateCatID" errormessage="Category ID đã tồn tại" class="fa fa-warning" style="color:red"/>
                 </td>
             </tr>
             <tr>

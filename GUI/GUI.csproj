@@ -534,6 +534,7 @@
     </Compile>
     <Compile Include="Categories.aspx.designer.cs">
       <DependentUpon>Categories.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Catagory.aspx.cs">
       <DependentUpon>Catagory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
