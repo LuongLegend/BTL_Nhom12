@@ -30,10 +30,7 @@ namespace GUI
         }
 
 
-        protected void GV_Bill_RowEditing(object sender, GridViewEditEventArgs e)
-        {
-
-        }
+        
 
         protected void GV_Bill_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
@@ -41,6 +38,13 @@ namespace GUI
 
             bus_bill.deleteBill(bill_ID);
             Response.Redirect("/Bill.aspx");
+        }
+
+
+        protected void GV_Bill_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            string bill_ID = GV_Bill.DataKeys[e.NewEditIndex].Value.ToString();
+            Response.Redirect("UpdateBill.aspx?bill_ID=" + bill_ID);
         }
     }
 }
