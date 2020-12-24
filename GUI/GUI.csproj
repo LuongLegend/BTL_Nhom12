@@ -572,6 +572,8 @@
     </Compile>
     <Compile Include="InsertNew.aspx.designer.cs">
       <DependentUpon>InsertNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="InsertBonus.aspx.cs">
       <DependentUpon>InsertBonus.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -635,6 +637,8 @@
     </Compile>
     <Compile Include="UpdateNew.aspx.designer.cs">
       <DependentUpon>UpdateNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="UpdateBonus.aspx.cs">
       <DependentUpon>UpdateBonus.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
