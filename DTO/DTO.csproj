@@ -44,9 +44,11 @@
     <Compile Include="DTO_Bonus.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Admin.cs" />
+    <Compile Include="DTO_Categories.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="DTO_News.cs" />
     <Compile Include="DTO_Products.cs" />
+    <Compile Include="DTO_Sale.cs" />
     <Compile Include="Product_Bonus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
