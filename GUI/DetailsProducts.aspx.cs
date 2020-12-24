@@ -18,29 +18,7 @@ namespace GUI
     {
         BUS_Product pro = new BUS_Product();
         DTO_Products p;
-        
-        void getAndUpdateListCheckBox(DataTable all, DataTable selected, CheckBoxList checkboxlist, string id, string name, string nameOption = "")
-        {
-            int count = 0;
-            foreach (DataRow r in all.Rows)
-            {
-                string Id = r[id].ToString();
-                string Name = nameOption != "" ? nameOption : r[name].ToString();
-                bool check = false;
-                foreach (DataRow row in selected.Rows)
-                {
-                    if (Id == row[id].ToString())
-                    {
-                        check = true;
-                        break;
-                    }
-                }
-                ListItem it = new ListItem(Name, Id);
-                checkboxlist.Items.Add(it);
-                checkboxlist.Items[count].Selected = check;
-                count++;
-            }
-        }
+      
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["fullname"] == null) Response.Redirect("/Login.aspx");
@@ -63,27 +41,27 @@ namespace GUI
                 ckcontent.InnerText = HttpUtility.HtmlDecode(dr["detail"].ToString());
                 DropDownList2.SelectedValue = dr["active"].ToString() == "False" ? "0" : "1";
                 DataTable allCat = pro.getAllCat();
-                DataTable allBonus = pro.getAllBonus();
-                DataTable allSale = pro.getAllSale();
                 DataTable listCat = pro.getCatProduct(id);
-                DataTable listBonus = pro.getBonusProduct(id);
-                DataTable listSale = pro.getSaleProduct(id);
-                getAndUpdateListCheckBox(allCat, listCat, CheckBoxList2, "category_ID", "category_name");
-                getAndUpdateListCheckBox(allBonus, listBonus, bonusCheckBox, "bonus_ID", "name_bonus");
                 int count = 0;
-                foreach (DataRow r in allSale.Rows)
+                foreach (DataRow r in allCat.Rows)
                 {
-                    string saleId = r["sale_ID"].ToString();
-                    string saleName = "Giảm " + r["sale_price"].ToString() + " khi mua " + r["min_product"].ToString() + " sản phẩm";
-                    ListItem it = new ListItem(saleName, saleId);
-                    dropDownListSale.Items.Add(it);
+                    string catId = r["category_ID"].ToString();
+                    string catName = r["category_name"].ToString();
+                    bool check = false;
+
+                    foreach (DataRow row in listCat.Rows)
+                    {
+                        if (catId == row["category_ID"].ToString())
+                        {
+                            check = true;
+                            break;
+                        }
+                    }
+                    ListItem it = new ListItem(catName, catId);
+                    CheckBoxList2.Items.Add(it);
+                    CheckBoxList2.Items[count].Selected = check;
                     count++;
                 }
-                if (pro.checkSale(id))
-                {
-                    dropDownListSale.SelectedValue = pro.getSaleWithProductId(id).Rows[0]["sale_ID"].ToString();
-                }
-
             }
         }
         void saveUpLoadFile()
@@ -101,7 +79,6 @@ namespace GUI
             var z = ckcontent.InnerText;
             var z2 = HttpUtility.HtmlEncode(z);
             string id = Request["id"];
-            //update product catagory
             pro.deleteProductCatagory(id);
             foreach (ListItem item in CheckBoxList2.Items)
             {
@@ -110,20 +87,6 @@ namespace GUI
                     pro.insertProductCatagory(id, item.Value);
                 }
             }
-            //update product bonus
-            pro.deleteProductBonus(id);
-            foreach (ListItem item in bonusCheckBox.Items)
-            {
-                if (item.Selected)
-                {
-                    pro.insertProductBonus(id, item.Value);
-                }
-            }
-            
-            //update product sale
-            pro.deleteProductSale(id);
-            pro.insertProductSale(id, dropDownListSale.SelectedValue);
-     
             //get value
             string pt = txt_Photo.ImageUrl;
             if (FileUpload1.FileName != "") pt = "~/Image/product/" + FileUpload1.FileName;

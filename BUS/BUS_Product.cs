@@ -24,21 +24,6 @@ namespace BUS
             return da.GetTable(sql);
         }
 
-        public DataTable getBonusProduct(string id)
-        {
-            string sql = "select * from products inner join Product_Bonus on products.product_ID=Product_Bonus.product_ID " +
-              "where products.product_ID='" + id + "'";
-            return da.GetTable(sql);
-
-        }
-
-        public DataTable getSaleProduct(string id)
-        {
-            string sql = "select * from products inner join Product_Sale on products.product_ID=Product_Sale.product_ID " +
-              "where products.product_ID='" + id + "'";
-            return da.GetTable(sql);
-        }
-
         public bool checkProductID(string id)
         {
             string sql = "select * from products " +
@@ -51,28 +36,6 @@ namespace BUS
             return da.GetTable(sql);
         }
 
-        public DataTable getAllBonus()
-        {
-            string sql = "select * from Bonus";
-            return da.GetTable(sql);
-        }
-
-        public DataTable getAllSale()
-        {
-            string sql = "select * from Sale";
-            return da.GetTable(sql);
-        }
-        public DataTable getSaleWithProductId(string id)
-        {
-            string sql = "select * from Product_Sale where product_ID='" + id + "'";
-            return da.GetTable(sql);
-        }
-
-        public bool checkSale(string id)
-        {
-            string sql = "select * from Product_Sale where product_ID='" + id + "'";
-            return da.check(sql);
-        }
 
         public DataTable getOneProduct(string id)
         {
@@ -112,30 +75,6 @@ namespace BUS
         public void deleteProductCatagory(string product_id)
         {
             string sql = "delete from Product_Category where product_ID='" + product_id + "'";
-            da.ExcuteNonQuery(sql);
-        }
-
-        public void insertProductBonus(string product_id, string bonus_id)
-        {
-            string sql = "insert into Product_Bonus values('" + product_id + "','" + bonus_id + "')";
-            da.ExcuteNonQuery(sql);
-        }
-
-        public void deleteProductBonus(string product_id)
-        {
-            string sql = "delete from Product_Bonus where product_ID='" + product_id + "'";
-            da.ExcuteNonQuery(sql);
-        }
-
-        public void insertProductSale(string product_id, string sale_id)
-        {
-            string sql = "insert into Product_Sale values('" + product_id + "','" + sale_id + "')";
-            da.ExcuteNonQuery(sql);
-        }
-
-        public void deleteProductSale(string product_id)
-        {
-            string sql = "delete from Product_Sale where product_ID='" + product_id + "'";
             da.ExcuteNonQuery(sql);
         }
 

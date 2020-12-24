@@ -114,24 +114,6 @@ namespace GUI
         protected global::System.Web.UI.WebControls.CheckBoxList CheckBoxList2;
 
         /// <summary>
-        /// bonusCheckBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList bonusCheckBox;
-
-        /// <summary>
-        /// dropDownListSale control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dropDownListSale;
-
-        /// <summary>
         /// Button1 control.
         /// </summary>
         /// <remarks>
