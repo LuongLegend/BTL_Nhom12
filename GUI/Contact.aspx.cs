@@ -17,9 +17,7 @@ namespace GUI
             {
                 Response.Redirect("/Home.aspx");
             }
-
-            gvContact.DataSource = bus_contact.getAllContact();
-            gvContact.DataBind();
+           
         }
 
         protected void gvContact_SelectedIndexChanged(object sender, EventArgs e)
