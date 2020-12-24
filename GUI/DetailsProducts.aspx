@@ -52,20 +52,27 @@
         <div class="form-group">
             <label for="editor" style="font-weight: bold">Details</label>
             <textarea id="ckcontent" runat="server" class="ckeditor"></textarea>
-        </div>
-
-        <div class="form-group">
-            <label for="DropDownList2"><b>Active</b></label>
-            <asp:DropDownList ID="DropDownList2" runat="server">
-                <asp:ListItem Value="1">True</asp:ListItem>
-                <asp:ListItem Value="0">False</asp:ListItem>
-            </asp:DropDownList>
-        </div>
-        <div class="form-row">
-            <label for="CheckBoxList2" style="font-weight: bold">Catagories</label>
-            <asp:CheckBoxList ID="CheckBoxList2" runat="server"></asp:CheckBoxList>
-        </div>
-        <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Style="position: fixed; right: 30%; bottom: 30%; padding: 20px" Text="Sửa" OnClick="Button1_Click" />
+      </div>
+            <div class="form-group">
+                  <label for="DropDownList2"><b>Active</b></label>
+                <asp:DropDownList ID="DropDownList2" runat="server">
+                    <asp:ListItem Value="1">True</asp:ListItem>
+                    <asp:ListItem Value="0">False</asp:ListItem>
+                </asp:DropDownList>
+                </div>
+         <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="CheckBoxList2" style="font-weight:bold">Catagories</label>
+                <asp:CheckBoxList ID="CheckBoxList2" runat="server"></asp:CheckBoxList>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="bonusCheckBox" style="font-weight:bold">Bonus</label>
+                <asp:CheckBoxList ID="bonusCheckBox" runat="server"></asp:CheckBoxList>
+                <label for="saleCheckbox" style="font-weight:bold">Sale</label>
+                <asp:DropDownList ID="dropDownListSale" runat="server"></asp:DropDownList>
+            </div>
+         </div>
+        <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary"  style="position:fixed;right:30%;bottom:30%;padding:20px" Text="Sửa" OnClick="Button1_Click" />
     </form>
 
 </asp:Content>

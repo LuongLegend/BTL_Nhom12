@@ -133,6 +133,7 @@
     <Content Include="Image\product\sp9.jpg" />
     <Content Include="InsertAccount.aspx" />
     <Content Include="InsertNew.aspx" />
+    <Content Include="InsertBonus.aspx" />
     <Content Include="InsertProduct.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MyAccount.aspx" />
@@ -488,6 +489,7 @@
     <Content Include="Scripts\ckeditor\themes\default\theme.js" />
     <Content Include="UpdateAccount.aspx" />
     <Content Include="UpdateNew.aspx" />
+    <Content Include="UpdateBonus.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -570,6 +572,12 @@
     </Compile>
     <Compile Include="InsertNew.aspx.designer.cs">
       <DependentUpon>InsertNew.aspx</DependentUpon>
+    <Compile Include="InsertBonus.aspx.cs">
+      <DependentUpon>InsertBonus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsertBonus.aspx.designer.cs">
+      <DependentUpon>InsertBonus.aspx</DependentUpon>
     </Compile>
     <Compile Include="InsertProduct.aspx.cs">
       <DependentUpon>InsertProduct.aspx</DependentUpon>
@@ -627,6 +635,12 @@
     </Compile>
     <Compile Include="UpdateNew.aspx.designer.cs">
       <DependentUpon>UpdateNew.aspx</DependentUpon>
+    <Compile Include="UpdateBonus.aspx.cs">
+      <DependentUpon>UpdateBonus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateBonus.aspx.designer.cs">
+      <DependentUpon>UpdateBonus.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -11,133 +11,97 @@ namespace GUI
 {
 
 
-    public partial class InsertProduct
+    public partial class UpdateBonus
     {
 
         /// <summary>
-        /// txt_ProductID control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_ProductID;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// cusCustom control.
+        /// txtbonusid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator cusCustom;
+        protected global::System.Web.UI.WebControls.TextBox txtbonusid;
 
         /// <summary>
-        /// txt_ProductName control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_ProductName;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// txt_Brand control.
+        /// txtbonusname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_Brand;
+        protected global::System.Web.UI.WebControls.TextBox txtbonusname;
 
         /// <summary>
-        /// txt_Origin control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_Origin;
+        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// txt_Sumary control.
+        /// bonusphoto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_Sumary;
+        protected global::System.Web.UI.WebControls.FileUpload bonusphoto;
 
         /// <summary>
-        /// txt_Price control.
+        /// txtbonusphoto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_Price;
+        protected global::System.Web.UI.WebControls.Image txtbonusphoto;
 
         /// <summary>
-        /// txt_Quantity control.
+        /// Label4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_Quantity;
+        protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// FileUpload1 control.
+        /// txtbonusprice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+        protected global::System.Web.UI.WebControls.TextBox txtbonusprice;
 
         /// <summary>
-        /// ckcontent control.
+        /// update control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ckcontent;
-
-        /// <summary>
-        /// CheckBoxList2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList CheckBoxList2;
-
-        /// <summary>
-        /// bonusCheckBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList bonusCheckBox;
-
-        /// <summary>
-        /// dropDownListSale control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dropDownListSale;
-
-        /// <summary>
-        /// Button1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button update;
     }
 }
