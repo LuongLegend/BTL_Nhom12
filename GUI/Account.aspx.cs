@@ -55,7 +55,7 @@ namespace GUI
 
         protected void lbThem_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("InsertAccount.aspx");
         }
     }
 }

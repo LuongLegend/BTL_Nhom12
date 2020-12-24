@@ -7,12 +7,15 @@ using System.Web.UI.WebControls;
 
 namespace GUI
 {
-    public partial class AddNews : System.Web.UI.Page
+    public partial class Catagory : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["fullname"] == null) Response.Redirect("/Login.aspx");
-            if (!HttpContext.Current.Session["role"].ToString().Equals("admin") && !HttpContext.Current.Session["role"].ToString().Equals("writer"))
+            if (HttpContext.Current.Session["role"].ToString() != "admin"
+               && HttpContext.Current.Session["role"].ToString() != "purchaser"
+               && HttpContext.Current.Session["role"].ToString() != "marketer"
+               )
             {
                 Response.Redirect("/Home.aspx");
             }

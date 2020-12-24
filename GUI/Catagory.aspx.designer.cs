@@ -10,7 +10,7 @@
 
 namespace GUI
 {
-    public partial class AddNews
+    public partial class Catagory
     {
     }
 }

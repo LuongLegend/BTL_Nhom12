@@ -4,11 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using BUS;
 namespace GUI
 {
     public partial class Contact : System.Web.UI.Page
     {
+        BUS_Contact bus_contact = new BUS_Contact();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["fullname"] == null) Response.Redirect("/Login.aspx");
@@ -16,6 +17,17 @@ namespace GUI
             {
                 Response.Redirect("/Home.aspx");
             }
+           
+        }
+
+        protected void gvContact_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void gvContact_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+
         }
     }
 }
