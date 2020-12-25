@@ -52,6 +52,8 @@
     </table>
     <br />
     <asp:Button ID="btnChangePassword" runat="server" OnClick="btnChangePassword_Click" Text="Submit" CssClass="btn-primary"/>
+        &nbsp;
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="MyAccount.aspx">Back</asp:HyperLink>
         <br />
         </div>
 </asp:Content>

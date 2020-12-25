@@ -54,7 +54,12 @@
         <tr>
             <td class="auto-style2">Trang thai</td>
             <td class="auto-style3">
-                <asp:TextBox ID="txtTrangThai" runat="server" Width="545px" Enabled="False"></asp:TextBox>
+
+                <asp:DropDownList ID="DropDownList1" runat="server">
+                    <asp:ListItem>pending</asp:ListItem>
+                    <asp:ListItem>approved</asp:ListItem>
+                    <asp:ListItem>cancel</asp:ListItem>
+                </asp:DropDownList>
             </td>
         </tr>
         <tr>

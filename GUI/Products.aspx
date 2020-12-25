@@ -7,13 +7,13 @@
     Quản lý sản phẩm<br />
  <div class="card">
   <div class="form-group row" >
-    <label for="inputKeyword" class="col-sm-2 col-form-label">Keyword: </label>
+    <label for="inputKeyword" class="col-sm-2 col-form-label" style="font-weight: bold">Keyword: </label>
     <div class="col-sm-10">
         <asp:TextBox ID="txtKeyword" runat="server" CssClass="form-control" placeholder="id | name | brand | origin"></asp:TextBox>
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputCata" class="col-sm-2 col-form-label">Catagories: </label>
+    <label for="inputCata" class="col-sm-2 col-form-label" style="font-weight: bold">Catagories: </label>
     <div class="col-sm-10">
         <asp:CheckBox ID="CheckBox1" runat="server" Checked="true"/> 
         <b>Tất cả</b> hoặc
@@ -24,7 +24,7 @@
     </div>
   </div>
     <div class="row">
-          <label for="inputKeyword" class="col-sm-2 col-form-label">Price: </label>
+          <label for="inputKeyword" class="col-sm-2 col-form-label" style="font-weight: bold">Price: </label>
     <div class="col">
      <asp:TextBox ID="txtMin" runat="server" CssClass="form-control" placeholder="min" TextMode="Number" min="0"></asp:TextBox>
     </div>
@@ -34,7 +34,7 @@
 
   </div>
                <div class="form-group row" >
-    <label for="inputKeyword" class="col-sm-2 col-form-label">Active: </label>
+    <label for="inputKeyword" class="col-sm-2 col-form-label" style="font-weight: bold">Active: </label>
     <div class="col-sm-10">
         <asp:DropDownList ID="DropDownList1" runat="server">
             <asp:ListItem Value="none">All</asp:ListItem>

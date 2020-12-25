@@ -15,7 +15,7 @@ namespace GUI
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["fullname"] == null) Response.Redirect("/Login.aspx");
-            if (!HttpContext.Current.Session["role"].ToString().Equals("admin") && !HttpContext.Current.Session["role"].ToString().Equals("writer"))
+            if (!HttpContext.Current.Session["role"].ToString().Equals("admin") && !HttpContext.Current.Session["role"].ToString().Equals("marketer"))
             {
                 Response.Redirect("/Home.aspx");
             }

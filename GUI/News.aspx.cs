@@ -51,5 +51,11 @@ namespace GUI
             bn.deleteNew(grdNews.DataKeys[e.RowIndex].Value.ToString());
             Response.Redirect("/News.aspx");
         }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            grdNews.DataSource = bn.findNews(txtKeyword.Text, activeList.SelectedValue);
+            grdNews.DataBind();
+        }
     }
 }

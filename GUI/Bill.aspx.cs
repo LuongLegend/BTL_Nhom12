@@ -46,5 +46,20 @@ namespace GUI
             string bill_ID = GV_Bill.DataKeys[e.NewEditIndex].Value.ToString();
             Response.Redirect("UpdateBill.aspx?bill_ID=" + bill_ID);
         }
+
+        protected void GV_Bill_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GV_Bill.PageIndex = e.NewPageIndex;
+            dislayBills();
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            string timeStart = txtDateStart.Text != "" ? txtDateStart.Text : "none";
+            string timeEnd = txtDateEnd.Text != "" ? txtDateEnd.Text : "none";
+            GV_Bill.DataSource = bus_bill.findBill(txtKeyword.Text, DropDownList1.SelectedValue, timeStart, timeEnd);
+            GV_Bill.DataBind();
+
+        }
     }
 }

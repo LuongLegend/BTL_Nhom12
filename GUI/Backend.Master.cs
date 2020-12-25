@@ -43,6 +43,7 @@ namespace GUI
                         cs.RegisterStartupScript(cstype, "7", hideCont);
                         cs.RegisterStartupScript(cstype, "8", hideBon);
                         cs.RegisterStartupScript(cstype, "18", hideSal);
+                        cs.RegisterStartupScript(cstype, "99", hideCat);
                     // cs.RegisterStartupScript(cstype, "9", hidePro);
                     break;
                     case "marketer":
@@ -54,12 +55,16 @@ namespace GUI
                     // cs.RegisterStartupScript(cstype, "9", hidePro);
                     break;
                     case "approver":
-                        cs.RegisterStartupScript(cstype, "13", hideBill);
-                        cs.RegisterStartupScript(cstype, "14", hideBon);
+                        // cs.RegisterStartupScript(cstype, "13", hideBill);
+                        cs.RegisterStartupScript(cstype, "4", hideCont);
                         cs.RegisterStartupScript(cstype, "15", hidePro);
                         cs.RegisterStartupScript(cstype, "16", hideSal);
                         cs.RegisterStartupScript(cstype, "17", hideCat);
-                        break;
+                        cs.RegisterStartupScript(cstype, "20", hideAcc);
+                        cs.RegisterStartupScript(cstype, "21", hideNews);
+                        cs.RegisterStartupScript(cstype, "22", hideBon);
+                        
+                    break;
 
                 }
             //}

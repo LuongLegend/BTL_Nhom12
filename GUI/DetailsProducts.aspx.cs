@@ -44,7 +44,8 @@ namespace GUI
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["fullname"] == null) Response.Redirect("/Login.aspx");
-            if (HttpContext.Current.Session["role"].ToString() != "admin" && HttpContext.Current.Session["role"].ToString() != "purchaser")
+            if (HttpContext.Current.Session["role"].ToString() != "admin" && HttpContext.Current.Session["role"].ToString() != "purchaser"
+                && HttpContext.Current.Session["role"].ToString() != "writer" && HttpContext.Current.Session["role"].ToString() != "marketer")
             {
                 Response.Redirect("/Home.aspx");
             }
@@ -98,50 +99,54 @@ namespace GUI
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
-            var z = ckcontent.InnerText;
-            var z2 = HttpUtility.HtmlEncode(z);
-            string id = Request["id"];
-            pro.deleteProductCatagory(id);
-            foreach (ListItem item in CheckBoxList2.Items)
+            if(HttpContext.Current.Session["role"].ToString() == "admin" || HttpContext.Current.Session["role"].ToString() == "purchaser")
             {
-                if (item.Selected)
+                var z = ckcontent.InnerText;
+                var z2 = HttpUtility.HtmlEncode(z);
+                string id = Request["id"];
+                pro.deleteProductCatagory(id);
+                foreach (ListItem item in CheckBoxList2.Items)
                 {
-                    pro.insertProductCatagory(id, item.Value);
+                    if (item.Selected)
+                    {
+                        pro.insertProductCatagory(id, item.Value);
+                    }
                 }
-            }
-            //update product bonus
-            pro.deleteProductBonus(id);
-            foreach (ListItem item in bonusCheckBox.Items)
-            {
-                if (item.Selected)
+                //update product bonus
+                pro.deleteProductBonus(id);
+                foreach (ListItem item in bonusCheckBox.Items)
                 {
-                    pro.insertProductBonus(id, item.Value);
+                    if (item.Selected)
+                    {
+                        pro.insertProductBonus(id, item.Value);
+                    }
                 }
-            }
 
-            //update product sale
-            if(noSale.Checked == false)
-            {
-                pro.deleteProductSale(id);
-                pro.insertProductSale(id, dropDownListSale.SelectedValue);
+                //update product sale
+                if(noSale.Checked == false)
+                {
+                    pro.deleteProductSale(id);
+                    pro.insertProductSale(id, dropDownListSale.SelectedValue);
+                }
+                else pro.deleteProductSale(id);
+                //get value
+                string pt = txt_Photo.ImageUrl;
+                if (FileUpload1.FileName != "") pt = "~/Image/product/" + FileUpload1.FileName;
+                p = new DTO_Products();
+                p.Product_id_ = id;
+                p.Product_name_ = txt_ProductName.Text;
+                p.Product_brand_ = txt_Brand.Text;
+                p.Origin_ = txt_Origin.Text;
+                p.Summary_ = txt_Sumary.Text;
+                p.Price_ = Int32.Parse(txt_Price.Text);
+                p.Quantity_ = Int32.Parse(txt_Quantity.Text);
+                p.Photo_ = pt;
+                p.Active_ = Int32.Parse(DropDownList2.SelectedValue.ToString());
+                pro.updateProduct(p.Product_id_, p.Product_name_, p.Product_brand_, p.Origin_, p.Summary_, p.Price_, p.Quantity_, p.Photo_, z2, DropDownList2.SelectedValue.ToString());
+                saveUpLoadFile();
+                Response.Redirect("Products.aspx");
             }
-            else pro.deleteProductSale(id);
-            //get value
-            string pt = txt_Photo.ImageUrl;
-            if (FileUpload1.FileName != "") pt = "~/Image/product/" + FileUpload1.FileName;
-            p = new DTO_Products();
-            p.Product_id_ = id;
-            p.Product_name_ = txt_ProductName.Text;
-            p.Product_brand_ = txt_Brand.Text;
-            p.Origin_ = txt_Origin.Text;
-            p.Summary_ = txt_Sumary.Text;
-            p.Price_ = Int32.Parse(txt_Price.Text);
-            p.Quantity_ = Int32.Parse(txt_Quantity.Text);
-            p.Photo_ = pt;
-            p.Active_ = Int32.Parse(DropDownList2.SelectedValue.ToString());
-            pro.updateProduct(p.Product_id_, p.Product_name_, p.Product_brand_, p.Origin_, p.Summary_, p.Price_, p.Quantity_, p.Photo_, z2, DropDownList2.SelectedValue.ToString());
-            saveUpLoadFile();
-            Response.Redirect("Products.aspx");
+            else ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "invalidPermission", "alert('Bạn không có quyền sửa sản phẩm ')", true);
         }
     }
 }

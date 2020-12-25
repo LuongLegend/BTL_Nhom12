@@ -27,5 +27,19 @@ namespace GUI
             string contact_ID = GV_Contact.DataKeys[e.NewEditIndex].Value.ToString();
             Response.Redirect("UpdateContact.aspx?contact_ID=" + contact_ID);
         }
+
+        protected void GV_Contact_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GV_Contact.PageIndex = e.NewPageIndex;
+            GV_Contact.DataSource = bus_contact.getAllContact();
+            GV_Contact.DataBind();
+        }
+        protected void btnSearch_Click1(object sender, EventArgs e)
+        {
+            string timeStart = txtDateStart.Text != "" ? txtDateStart.Text : "none";
+            string timeEnd = txtDateEnd.Text != "" ? txtDateEnd.Text : "none";
+            GV_Contact.DataSource = bus_contact.findContact(txtKeyword.Text, DropDownList1.SelectedValue, timeStart, timeEnd);
+            GV_Contact.DataBind();
+        }
     }
 }

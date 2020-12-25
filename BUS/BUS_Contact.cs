@@ -29,5 +29,15 @@ namespace BUS
             da.ExcuteNonQuery(sql);
 
         }
+        public DataTable findContact(string keyword, string status, string timeStart, string timeEnd)
+        {
+            string sql = "select * from Contact where (contact_ID like N'%" + keyword + "%' or username like N'%" + keyword + "%' " +
+                "or phone like N'%" + keyword + "%' " +
+                "or address like N'%" + keyword + "%') ";
+            if (status != "none") sql += " and status_Contact='" + status + "'";
+            if (timeStart != "none") sql += " and create_date>='" + timeStart + "'";
+            if (timeEnd != "none") sql += " and create_date<='" + timeEnd + "'";
+            return da.GetTable(sql);
+        }
     }
 }

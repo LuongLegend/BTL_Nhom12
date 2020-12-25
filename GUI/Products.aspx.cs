@@ -24,7 +24,7 @@ namespace GUI
             if (Session["fullname"] == null) Response.Redirect("/Login.aspx");
             if (HttpContext.Current.Session["role"].ToString() != "admin" 
                 && HttpContext.Current.Session["role"].ToString() != "purchaser" 
-                && HttpContext.Current.Session["role"].ToString() != "writter" 
+                && HttpContext.Current.Session["role"].ToString() != "writer" 
                 && HttpContext.Current.Session["role"].ToString() != "marketer"
                 )
             {

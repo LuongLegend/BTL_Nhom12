@@ -16,53 +16,53 @@
     
     <table class="auto-style1">
         <tr>
-            <td class="auto-style2">ID</td>
+            <td class="auto-style2">Contact_ID</td>
             <td>
                 <asp:TextBox ID="txtID" runat="server" Width="385px" CssClass="auto-style3" Enabled="False"></asp:TextBox>
             </td>
         </tr>
         <tr>
-            <td class="auto-style2">Ten</td>
+            <td class="auto-style2" style="font-weight: bold">Tên khách hàng</td>
             <td>
                 <asp:TextBox ID="txtTen" runat="server" Width="385px" Enabled="False"></asp:TextBox>
             </td>
         </tr>
         <tr>
-            <td class="auto-style2">So dien thoai</td>
+            <td class="auto-style2" style="font-weight: bold">Số điện thoại</td>
             <td>
                 <asp:TextBox ID="txtSoDienThoai" runat="server" Width="385px" Enabled="False"></asp:TextBox>
             </td>
         </tr>
         <tr>
-            <td class="auto-style2">Dia chi</td>
+            <td class="auto-style2" style="font-weight: bold">Địa chỉ</td>
             <td>
                 <asp:TextBox ID="txtDiaChi" runat="server" Width="385px" Enabled="False"></asp:TextBox>
             </td>
         </tr>
         <tr>
-            <td class="auto-style2">Note</td>
+            <td class="auto-style2" style="font-weight: bold">Ghi chú</td>
             <td>
                 <asp:TextBox ID="txtNote" runat="server" Width="385px" Enabled="False"></asp:TextBox>
             </td>
         </tr>
         <tr>
-            <td class="auto-style2">Thoi gian tao</td>
+            <td class="auto-style2" style="font-weight: bold">Thời gian tạo</td>
             <td>
                 <asp:TextBox ID="txtThoiGianTao" runat="server" Width="385px" Enabled="False"></asp:TextBox>
             </td>
         </tr>
         <tr>
-            <td class="auto-style2">San pham</td>
+            <td class="auto-style2" style="font-weight: bold">Sản phẩm</td>
             <td>
                 <asp:TextBox ID="txtSanPham" runat="server" Rows="3" TextMode="MultiLine" Width="386px" Enabled="False"></asp:TextBox>
             </td>
         </tr>
         <tr>
-            <td class="auto-style2">Trang thai</td>
+            <td class="auto-style2" style="font-weight: bold">Trạng thái</td>
             <td>
                 <asp:DropDownList ID="DropDownList_Status" runat="server" Width="160px">
                     <asp:ListItem Value="pending">pending</asp:ListItem>
-                    <asp:ListItem Value="resolve">resolve</asp:ListItem>
+                    <asp:ListItem Value="resolved">resolved</asp:ListItem>
                 </asp:DropDownList>
             </td>
         </tr>

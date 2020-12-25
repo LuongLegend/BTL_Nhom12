@@ -18,13 +18,13 @@
     Quản lý tài khoản<br />
   <div class="card">
   <div class="form-group row" >
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Keyword: </label>
+    <label for="inputEmail3" class="col-sm-2 col-form-label" style="font-weight: bold">Keyword: </label>
     <div class="auto-style1">
         <asp:TextBox ID="txtKeyword" runat="server" CssClass="form-control" placeholder="admin_ID | admin_name | fullname | address | phone number"></asp:TextBox>
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Role admin: </label>
+    <label for="inputPassword3" class="col-sm-2 col-form-label" style="font-weight: bold">Role admin: </label>
     <div class="col-sm-10">
          <asp:DropDownList ID="listRole" runat="server" TabIndex="7" >
                     <asp:ListItem Value="none">Tất cả</asp:ListItem>

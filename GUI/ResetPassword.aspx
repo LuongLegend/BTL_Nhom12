@@ -19,7 +19,7 @@
           <p align="center">
               <table class="auto-style2" style="background-color:antiquewhite" align="center">
                   <tr>
-                      <td class="auto-style1">New password:</td>
+                      <td class="auto-style1" style="font-weight: bold">New password:</td>
                       <td class="auto-style3">
                           <asp:TextBox ID="TextBox1" runat="server" required="required" minlength="6"></asp:TextBox>
                       </td>

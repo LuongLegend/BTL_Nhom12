@@ -16,7 +16,7 @@ namespace GUI
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["fullname"] == null) Response.Redirect("/Login.aspx");
-            if (HttpContext.Current.Session["role"].ToString() != "admin" && HttpContext.Current.Session["role"].ToString() != "purchaser")
+            if (HttpContext.Current.Session["role"].ToString() != "admin" && HttpContext.Current.Session["role"].ToString() != "writer")
             {
                 Response.Redirect("/Home.aspx");
             }
@@ -27,7 +27,7 @@ namespace GUI
                 txtNewID.Text = n["new_ID"].ToString();
                 txtTitle.Text = n["title"].ToString();
                 txtPhoto.ImageUrl = n["photo"].ToString();
-                DropDownStatus.SelectedValue = n["status_News"].ToString() == "False" ? "0" : "1";
+                DropDownStatus.SelectedValue = n["status_News"].ToString() == "0" ? "0" : "1";
                 txtSummary.Text = n["summary"].ToString();
                 ckcontent.InnerText = HttpUtility.HtmlDecode(n["detail"].ToString());
             }
@@ -59,7 +59,7 @@ namespace GUI
             n_DTO.summary = txtSummary.Text;
             n_DTO.photo = pt;
             n_DTO.statusNews = Int32.Parse(DropDownStatus.SelectedValue.ToString());
-            news.updateNew(n_DTO.newID, n_DTO.title, n_DTO.photo, z2, DropDownStatus.SelectedValue.ToString(), n_DTO.summary);
+            news.updateNew(n_DTO.newID, n_DTO.title, n_DTO.photo, z2, n_DTO.statusNews, n_DTO.summary);
             saveUpLoadFile();
             Response.Redirect("/News.aspx");
         }

@@ -15,7 +15,7 @@ namespace GUI
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["fullname"] == null) Response.Redirect("/Login.aspx");
-            if (HttpContext.Current.Session["role"].ToString() != "admin" && HttpContext.Current.Session["role"].ToString() != "purchaser")
+            if (!HttpContext.Current.Session["role"].ToString().Equals("admin") && !HttpContext.Current.Session["role"].ToString().Equals("approver"))
             {
                 Response.Redirect("/Home.aspx");
             }
@@ -30,7 +30,7 @@ namespace GUI
                 txtDiaChi.Text = dataRow["address"].ToString();
                 txtNote.Text = dataRow["note"].ToString();
                 txtPhuongThucThanhToan.Text = dataRow["payment_method"].ToString();
-                txtTrangThai.Text = dataRow["status_bill"].ToString();
+                DropDownList1.SelectedValue = dataRow["status_bill"].ToString();
 
             }
         }
@@ -43,9 +43,9 @@ namespace GUI
             string address = txtDiaChi.Text;
             string note = txtNote.Text;
             string payment_method = txtPhuongThucThanhToan.Text;
-            string status_bill = txtTrangThai.Text;
+            string status_bill = DropDownList1.SelectedValue;
 
-            bus_bill.updateSpecBill(bill_ID,name, phone, address, note, payment_method, status_bill);
+            bus_bill.updateSpecBill(HttpContext.Current.Session["id"].ToString(), bill_ID,name, phone, address, note, payment_method, status_bill);
             Response.Redirect("/Bill.aspx");
         }
     }

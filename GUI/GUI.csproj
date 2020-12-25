@@ -81,7 +81,6 @@
     <Content Include="Bill.aspx" />
     <Content Include="Bonus.aspx" />
     <Content Include="Categories.aspx" />
-    <Content Include="Catagory.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="CK5editor\ck5.js" />
     <Content Include="Contact.aspx" />
@@ -135,7 +134,6 @@
     <Content Include="Image\product\sp8.jpg" />
     <Content Include="Image\product\sp9.jpg" />
     <Content Include="InsertAccount.aspx" />
-    <Content Include="InsertBill.aspx" />
     <Content Include="InsertNew.aspx" />
     <Content Include="InsertBonus.aspx" />
     <Content Include="InsertCate.aspx" />
@@ -539,13 +537,6 @@
     <Compile Include="Categories.aspx.designer.cs">
       <DependentUpon>Categories.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Catagory.aspx.cs">
-      <DependentUpon>Catagory.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Catagory.aspx.designer.cs">
-      <DependentUpon>Catagory.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -590,13 +581,6 @@
     </Compile>
     <Compile Include="InsertAccount.aspx.designer.cs">
       <DependentUpon>InsertAccount.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="InsertBill.aspx.cs">
-      <DependentUpon>InsertBill.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="InsertBill.aspx.designer.cs">
-      <DependentUpon>InsertBill.aspx</DependentUpon>
     </Compile>
     <Compile Include="InsertNew.aspx.cs">
       <DependentUpon>InsertNew.aspx</DependentUpon>
@@ -690,6 +674,7 @@
     </Compile>
     <Compile Include="UpdateBill.aspx.designer.cs">
       <DependentUpon>UpdateBill.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UpdateContact.aspx.cs">
       <DependentUpon>UpdateContact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

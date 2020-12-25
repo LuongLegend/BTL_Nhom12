@@ -19,6 +19,7 @@ namespace GUI
         {
             Session["fullname"] = null;
             Session["role"] = null;
+            Session["id"] = null;
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
@@ -40,6 +41,7 @@ namespace GUI
         {
             Session["fullname"] = null;
             Session["role"] = null;
+            Session["id"] = null;
         }
 
         protected void Application_End(object sender, EventArgs e)
