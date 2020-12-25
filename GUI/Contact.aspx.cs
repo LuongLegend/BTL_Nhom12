@@ -17,17 +17,15 @@ namespace GUI
             {
                 Response.Redirect("/Home.aspx");
             }
-           
+
+            GV_Contact.DataSource = bus_contact.getAllContact();
+            GV_Contact.DataBind();
         }
 
-        protected void gvContact_SelectedIndexChanged(object sender, EventArgs e)
+        protected void GV_Contact_RowEditing(object sender, GridViewEditEventArgs e)
         {
-
-        }
-
-        protected void gvContact_RowEditing(object sender, GridViewEditEventArgs e)
-        {
-
+            string contact_ID = GV_Contact.DataKeys[e.NewEditIndex].Value.ToString();
+            Response.Redirect("UpdateContact.aspx?contact_ID=" + contact_ID);
         }
     }
 }
