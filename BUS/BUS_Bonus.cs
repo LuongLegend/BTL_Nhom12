@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using DTO;
 namespace BUS
 {
     public class BUS_Bonus
@@ -22,17 +23,19 @@ namespace BUS
         }
         public void delBonus(string bonusid)
         {
-            string sql = "DELETE FROM BONUS WHERE bonus_id = '"+bonusid+"'";
+            string sql = "DELETE FROM PRODUCT_BONUS WHERE bonus_id = '" + bonusid + "'";
+            sql += " ";
+            sql += "DELETE FROM BONUS WHERE bonus_id = '"+bonusid+"'";
             da.ExcuteNonQuery(sql);
         }
-        public void updateBonus(string bonusid, string bonusname, string photo, int price)
+        public void updateBonus(DTO_Bonus db)
         {
-            string sql = "update BONUS set name_bonus=N'" + bonusname + "', photo='" + photo + "', price=" + price + " where bonus_ID='" + bonusid + "'";
+            string sql = "update BONUS set name_bonus=N'" + db.Name_bonus_ + "', photo='" + db.Photo_ + "', price=" + db.Price_ + " where bonus_ID='" + db.Bonus_id_ + "'";
             da.ExcuteNonQuery(sql);
         }
-        public void insertBonus(string bonusid, string bonusname, string photo, int price)
+        public void insertBonus(DTO_Bonus db)
         {
-            string sql = "insert into Bonus values('" + bonusid + "',N'" + bonusname + "','" + photo + "'," + price +")";
+            string sql = "insert into Bonus values('" + db.Bonus_id_ + "',N'" + db.Name_bonus_ + "','" + db.Photo_ + "'," + db.Price_ +")";
             da.ExcuteNonQuery(sql);
         }
     }

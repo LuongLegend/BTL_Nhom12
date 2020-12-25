@@ -27,19 +27,28 @@ namespace GUI
             }
 
         }
-
+        protected void validateBonusID(object sender, ServerValidateEventArgs e)
+            {
+                if (bb.getBonusID(e.Value).Rows.Count > 0)
+                    e.IsValid = false;
+                else
+                    e.IsValid = true;
+            }
         protected void addNewBonus(object sender, EventArgs e)
         {
-            string pt = txtbonusphoto.ImageUrl;
-            if (bonusphoto.FileName != "") pt = "~/Image/bonus/" + bonusphoto.FileName;
-            bn = new DTO_Bonus();
-            bn.Bonus_id_ = txtbonusid.Text;
-            bn.Name_bonus_ = txtbonusname.Text;
-            bn.Photo_ = pt;
-            bn.Price_ = Convert.ToInt32(txtbonusprice.Text);
-            bb.insertBonus(bn.Bonus_id_, bn.Name_bonus_, bn.Photo_, bn.Price_);
-            saveUpLoadFile();
-            Response.Redirect("Bonus.aspx");
+            if (Page.IsValid)
+            {
+                string pt = txtbonusphoto.ImageUrl;
+                if (bonusphoto.FileName != "") pt = "~/Image/bonus/" + bonusphoto.FileName;
+                bn = new DTO_Bonus();
+                bn.Bonus_id_ = txtbonusid.Text;
+                bn.Name_bonus_ = txtbonusname.Text;
+                bn.Photo_ = pt;
+                bn.Price_ = Convert.ToInt32(txtbonusprice.Text);
+                bb.insertBonus(bn);
+                saveUpLoadFile();
+                Response.Redirect("Bonus.aspx");
+            }
         }
     }
 }

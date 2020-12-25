@@ -14,12 +14,15 @@
                 <ItemStyle HorizontalAlign="Center" />
                 </asp:BoundField>
                 <asp:ImageField DataImageUrlField="photo" HeaderText="Photo">
+                    <ControlStyle Height="150px" Width="100px" />
                     <ItemStyle HorizontalAlign="Center" />
                 </asp:ImageField>
                 <asp:BoundField DataField="price" HeaderText="Price" >
                 <ItemStyle HorizontalAlign="Center" />
                 </asp:BoundField>
-                <asp:ButtonField CommandName="editBonus" HeaderText="Edit" Text="Edit" ItemStyle-HorizontalAlign="Center" />
+                <asp:ButtonField CommandName="editBonus" HeaderText="Edit" Text="Edit" ItemStyle-HorizontalAlign="Center" >
+<ItemStyle HorizontalAlign="Center"></ItemStyle>
+                </asp:ButtonField>
                 <asp:CommandField HeaderText="Delete" ShowDeleteButton="True" >
                 <ItemStyle HorizontalAlign="Center" />
                 </asp:CommandField>

@@ -26,22 +26,17 @@
             <label for="editor" style="font-weight: bold">Details</label>
             <textarea id="ckcontent" runat="server" class="ckeditor"></textarea>
         </div>
-        <div class="form-group">
-            
-        </div>
-        <div class="form-row" style="margin-top: 30px">
-            <div class="form-group col-md-6">
+            <div class="form-row">
                 <label for="DropDownStatus"><b>Active</b></label>
                 <asp:DropDownList ID="DropDownStatus" runat="server">
                     <asp:ListItem Value="1">True</asp:ListItem>
                     <asp:ListItem Value="0">False</asp:ListItem>
                 </asp:DropDownList>
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-row">
                 <label for="txtSummary" style="font-weight: bold">Summary</label>
                 <asp:TextBox TextMode="MultiLine" ID="txtSummary" runat="server" TabIndex="1" required="required" CssClass="form-control"></asp:TextBox>
             </div>
-        </div>
         <asp:Button runat="server" ID="btnLuu" Text="Lưu" CssClass="btn btn-success form-control" OnClick="btnLuu_Click" />
     </form>
 

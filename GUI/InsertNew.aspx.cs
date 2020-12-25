@@ -35,6 +35,13 @@ namespace GUI
             }
 
         }
+        protected void validateNewsID(object sender, ServerValidateEventArgs e)
+        {
+            if (newB.checkNews(e.Value))
+                e.IsValid = false;
+            else
+                e.IsValid = true;
+        }
         protected void btnThem_Click(object sender, EventArgs e)
         {
             if (Page.IsValid)
@@ -46,10 +53,10 @@ namespace GUI
                 if (FileUpload1.FileName != "") pt = "~/Image/news/" + FileUpload1.FileName;
                 newD.newID = txtNewID.Text;
                 newD.title = txtTitle.Text;
-                newD.summary = txtSummary.Text;
+                newD.summary =txtSummary.Text;
                 newD.statusNews = Convert.ToInt32(DropDownStatusAdd.SelectedValue.ToString());
                 newD.photo= pt;
-                newB.insertNew(newD.newID, newD.title, newD.photo, DropDownStatusAdd.SelectedValue.ToString(), newD.summary, z2);
+                newB.insertNew(newD.newID, newD.title, newD.photo, z2, Int32.Parse(DropDownStatusAdd.SelectedValue), newD.summary);
                 saveUpLoadFile();
                 Response.Redirect("/News.aspx");
             }
