@@ -12,6 +12,17 @@ namespace GUI
     public partial class UpdateBill : System.Web.UI.Page
     {
         BUS_Bill bus_bill = new BUS_Bill();
+        public int getPrice(int price,int quantity, int min_product = 0, int product_sale =0)
+        {
+            if (quantity > min_product && min_product > 0) return price - product_sale;
+            else return price;
+        }
+
+        public int getTotalPrice(int price, int quantity, int min_product=0, int product_sale=0)
+        {
+            if (quantity > min_product && min_product > 0) return (price - product_sale)*quantity;
+            else return price*quantity;
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["fullname"] == null) Response.Redirect("/Login.aspx");
@@ -31,7 +42,8 @@ namespace GUI
                 txtNote.Text = dataRow["note"].ToString();
                 txtPhuongThucThanhToan.Text = dataRow["payment_method"].ToString();
                 DropDownList1.SelectedValue = dataRow["status_bill"].ToString();
-
+                GridView1.DataSource = bus_bill.findProductBill(bill_ID);
+                GridView1.DataBind();
             }
         }
 

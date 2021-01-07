@@ -19,47 +19,45 @@ namespace GUI
             {
                 Response.Redirect("/Home.aspx");
             }
-
+            if (!IsPostBack)
+            {
             dislayBills();
+            }
         }
 
         public void dislayBills()
         {
-            GV_Bill.DataSource = bus_bill.getAllBill();
-            GV_Bill.DataBind();
+  
+            GridView1.DataSource = bus_bill.getAllBill();
+            GridView1.DataBind();
         }
-
-
-        
-
-        protected void GV_Bill_RowDeleting(object sender, GridViewDeleteEventArgs e)
-        {
-            string bill_ID = GV_Bill.DataKeys[e.RowIndex].Value.ToString();
-
-            bus_bill.deleteBill(bill_ID);
-            Response.Redirect("/Bill.aspx");
-        }
-
-
-        protected void GV_Bill_RowEditing(object sender, GridViewEditEventArgs e)
-        {
-            string bill_ID = GV_Bill.DataKeys[e.NewEditIndex].Value.ToString();
-            Response.Redirect("UpdateBill.aspx?bill_ID=" + bill_ID);
-        }
-
-        protected void GV_Bill_PageIndexChanging(object sender, GridViewPageEventArgs e)
-        {
-            GV_Bill.PageIndex = e.NewPageIndex;
-            dislayBills();
-        }
-
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             string timeStart = txtDateStart.Text != "" ? txtDateStart.Text : "none";
             string timeEnd = txtDateEnd.Text != "" ? txtDateEnd.Text : "none";
-            GV_Bill.DataSource = bus_bill.findBill(txtKeyword.Text, DropDownList1.SelectedValue, timeStart, timeEnd);
-            GV_Bill.DataBind();
+            GridView1.DataSource = bus_bill.findBill(txtKeyword.Text, DropDownList1.SelectedValue, timeStart, timeEnd);
+            GridView1.DataBind();
 
+        }
+
+        protected void GV_Bill_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GridView1.PageIndex = e.NewPageIndex;
+            dislayBills();
+        }
+
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "editBill")
+            {
+                string id = GridView1.Rows[int.Parse(e.CommandArgument.ToString())].Cells[0].Text;
+                Response.Redirect("UpdateBill.aspx?bill_ID=" + id);
+            }
         }
     }
 }

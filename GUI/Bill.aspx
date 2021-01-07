@@ -37,49 +37,30 @@
     </div>
   </div>
     <br />
-    <asp:GridView ID="GV_Bill" runat="server" AutoGenerateColumns="False"  DataKeyNames="bill_ID" OnRowDeleting="GV_Bill_RowDeleting" OnRowEditing="GV_Bill_RowEditing" AllowPaging="True" OnPageIndexChanging="GV_Bill_PageIndexChanging" PageSize="5">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowCommand="GridView1_RowCommand" AllowPaging="True" BorderWidth="1px">
+        <AlternatingRowStyle BackColor="White" />
         <Columns>
-            <asp:BoundField DataField="bill_ID" HeaderText="Bill_ID" SortExpression="bill_ID">
-            <HeaderStyle BackColor="#FFFFCC" HorizontalAlign="Center" />
-            <ItemStyle HorizontalAlign="Center" />
-            </asp:BoundField>
-            <asp:BoundField DataField="admin_ID" HeaderText="adminID xử lý" SortExpression="admin_ID">
-            <HeaderStyle BackColor="#FFFFCC" HorizontalAlign="Center" />
-            <ItemStyle HorizontalAlign="Center" />
-            </asp:BoundField>
-            <asp:BoundField DataField="username" HeaderText="Tên khách hàng" SortExpression="username">
-            <HeaderStyle BackColor="#FFFFCC" HorizontalAlign="Center" />
-            <ItemStyle HorizontalAlign="Center" />
-            </asp:BoundField>
-            <asp:BoundField DataField="phone" HeaderText="Số điện thoại" SortExpression="phone">
-            <HeaderStyle BackColor="#FFFFCC" HorizontalAlign="Center" />
-            <ItemStyle HorizontalAlign="Center" />
-            </asp:BoundField>
-            <asp:BoundField DataField="address" HeaderText="Địa chỉ" SortExpression="address">
-            <HeaderStyle BackColor="#FFFFCC" HorizontalAlign="Center" />
-            <ItemStyle HorizontalAlign="Center" />
-            <HeaderStyle BackColor="#FFFFCC" HorizontalAlign="Center" />
-            <ItemStyle HorizontalAlign="Center" />
-            </asp:BoundField>
-            <asp:BoundField DataField="note" HeaderText="Note" SortExpression="note">
-            <HeaderStyle BackColor="#FFFFCC" HorizontalAlign="Center" />
-            <ItemStyle HorizontalAlign="Center" />
-            </asp:BoundField>
-            <asp:BoundField DataField="payment_method" HeaderText="Phương thức thanh toán" SortExpression="payment_method">
-            <HeaderStyle BackColor="#FFFFCC" HorizontalAlign="Center" />
-            <ItemStyle HorizontalAlign="Center" />
-            </asp:BoundField>
-            <asp:BoundField DataField="status_bill" HeaderText="Trạng thái" SortExpression="status_bill">
-            <HeaderStyle BackColor="#FFFFCC" HorizontalAlign="Center" />
-            <ItemStyle HorizontalAlign="Center" />
-            </asp:BoundField>
-            <asp:BoundField DataField="bill_date" HeaderText="Thời gian" SortExpression="bill_date">
-            <HeaderStyle BackColor="#FFFFCC" HorizontalAlign="Center" />
-            <ItemStyle HorizontalAlign="Center" />
-            </asp:BoundField>
-            <asp:CommandField ButtonType="Button" HeaderText="Cập nhật" ShowEditButton="True" ShowHeader="True">
-            <HeaderStyle BackColor="#FFFFCC" HorizontalAlign="Center" />
-            </asp:CommandField>
+            <asp:BoundField DataField="bill_ID" HeaderText="Bill_ID" />
+            <asp:BoundField DataField="admin_ID" HeaderText="adminID xử lý" />
+            <asp:BoundField DataField="username" HeaderText="Tên khách hàng" />
+            <asp:BoundField DataField="phone" HeaderText="Số điện thoại" />
+            <asp:BoundField DataField="address" HeaderText="Địa chỉ" />
+            <asp:BoundField DataField="note" HeaderText="Ghi chú" />
+            <asp:BoundField DataField="payment_method" HeaderText="Phương thức thanh toán" />
+            <asp:BoundField DataField="status_bill" HeaderText="Trạng thái" />
+            <asp:BoundField DataField="bill_date" HeaderText="Thời gian" />
+            <asp:ButtonField HeaderText="Cập nhật" Text="Cập nhật" CommandName="editBill" ControlStyle-ForeColor="Blue"/>
         </Columns>
+        <EditRowStyle BackColor="#2461BF" />
+        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+        <RowStyle BackColor="#EFF3FB" />
+        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+        <SortedAscendingCellStyle BackColor="#F5F7FB" />
+        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+        <SortedDescendingCellStyle BackColor="#E9EBEF" />
+        <SortedDescendingHeaderStyle BackColor="#4870BE" />
     </asp:GridView>
-</asp:Content>
+    <br />
+    </asp:Content>

@@ -48,5 +48,17 @@ namespace BUS
             if (timeEnd != "none") sql += " and bill_date<='" + timeEnd + "'";
             return da.GetTable(sql);
         }
+
+        public DataTable findProductBill(string billID)
+        {
+            string sql = "select Products.price, Products.product_ID, Products.product_name,Product_Bill.quanitity,Products.photo,ISNULL(Sale.min_product,0) as 'min_product', ISNULL(Sale.sale_price,0) as 'sale_price'" +
+                "from Bill join Product_Bill on Bill.bill_ID = Product_Bill.bill_ID " +
+                "join Products on Product_Bill.product_ID = Products.product_ID " +
+                "left join Product_Sale on Product_Sale.product_ID = Products.product_ID " +
+                "left join Sale on Product_Sale.sale_ID = Sale.sale_ID " +
+                "where Bill.bill_ID = '"+billID+"'";
+            return da.GetTable(sql);
+        }
+
     }
 }
